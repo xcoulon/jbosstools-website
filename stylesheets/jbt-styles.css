@@ -29,26 +29,22 @@ td.right {
 /* line 31, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 p {
   text-align: justify;
-  margin-bottom: 20px;
-  /*img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }*/
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-/* line 41, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 37, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 p + ul {
   margin-top: -20px;
 }
 
-/* line 45, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
-p + blockquote {
-  margin-top: -10px;
-  margin-bottom: 10px;
+/* line 41, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+table {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
-/* line 51, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 46, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 hr {
   height: 1px;
   margin: 1.5em 0;
@@ -60,37 +56,37 @@ hr {
   border: 0;
 }
 
-/* line 62, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 57, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 section {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 66, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 61, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 section header {
   margin-bottom: 10px;
 }
-/* line 68, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 63, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 section header h3 {
   text-align: center;
 }
-/* line 74, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 69, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 section h2 [class^="icon-"], section h2 [class*=" icon-"], section h3 [class^="icon-"], section h3 [class*=" icon-"] {
   vertical-align: baseline;
   margin-right: 5px;
   margin-top: 5px;
 }
-/* line 81, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 76, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 section .item {
   margin-bottom: 10px;
 }
 
-/* line 86, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 81, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #content-wrapper {
   margin-top: 10px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 86, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+  /* line 81, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
   #content-wrapper {
     max-width: 900px;
     margin-left: auto;
@@ -98,7 +94,7 @@ section .item {
   }
 }
 @media screen and (width: 940px) {
-  /* line 86, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+  /* line 81, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
   #content-wrapper {
     max-width: 900px;
     margin-left: auto;
@@ -106,12 +102,12 @@ section .item {
   }
 }
 
-/* line 105, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 98, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .nav {
   margin-bottom: 0px;
 }
 
-/* line 109, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 102, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .tab-content {
   background: #f3f3f3;
   padding-top: 20px;
@@ -120,28 +116,42 @@ section .item {
   padding-bottom: 20px;
 }
 
-/* line 117, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 110, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 blockquote > p {
   font-size: 14px;
 }
 
-/* line 121, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 114, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .container-fluid {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
+/* line 123, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+.breadcrumb > .active {
+  color: #999999;
+}
+
+/* line 127, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+a.dropdown-toggle {
+  text-decoration: none;
+}
 /* line 129, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+a.dropdown-toggle b.caret {
+  color: #336699;
+}
+
+/* line 138, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .navbar-inner {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
 }
-/* line 132, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 141, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .navbar-inner .btn {
   border-width: 0px;
 }
 
-/* line 140, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 149, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .hero-unit {
   background: white;
   padding-top: 30px;
@@ -149,38 +159,52 @@ blockquote > p {
   margin-top: 30px;
 }
 
-/* line 147, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 156, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .hero-unit > img {
   padding-left: 20px;
   float: right;
 }
 
-/* line 153, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
-.hero-content h1, .hero-content h2 {
+/* line 161, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+.hero-content h1, .hero-content h2, .hero-content p {
   text-align: right;
 }
 
-/* line 156, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 164, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .hero-content h1 {
   margin-top: 20px;
 }
 
-/* line 159, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 167, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .hero-content h2 img {
   vertical-align: text-bottom;
 }
 
-/* line 167, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 175, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #jbds .download-unit {
-  background: #bdffb4;
+  background: rgba(180, 180, 180, 0.2);
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
 }
-
-/* line 173, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
-#jbt .download-unit {
+/* line 180, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+#jbds .download-unit:hover {
   background: #cbeafd;
 }
 
-/* line 178, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 187, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+#jbt .download-unit {
+  background: rgba(180, 180, 180, 0.2);
+  transition: background .25s ease-in-out;
+  -moz-transition: background .25s ease-in-out;
+  -webkit-transition: background .25s ease-in-out;
+}
+/* line 192, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+#jbt .download-unit:hover {
+  background: #cbeafd;
+}
+
+/* line 198, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .download-unit {
   position: relative;
   margin-bottom: 1em;
@@ -189,15 +213,15 @@ blockquote > p {
   min-height: 25em;
   height: auto;
 }
-/* line 186, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 206, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .download-unit ul {
   list-style-type: square;
 }
-/* line 188, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 208, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .download-unit ul li {
   line-height: 2em;
 }
-/* line 192, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 212, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .download-unit .download-btn {
   margin-left: -1em;
   position: absolute;
@@ -206,27 +230,27 @@ blockquote > p {
   text-align: center;
 }
 
-/* line 202, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 222, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .links {
   position: relative;
   float: right;
 }
-/* line 203, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 223, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .links a {
   margin-right: 0.0em;
 }
-/* line 206, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 226, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .links span {
   padding-top: 4px;
   line-height: 20px;
 }
 
-/* line 214, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 234, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #release_info + #installation {
   margin-top: 2em;
 }
 
-/* line 218, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 238, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #installation-tabs {
   margin-left: auto;
   margin-right: auto;
@@ -237,23 +261,19 @@ blockquote > p {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
 }
-/* line 228, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
-#installation-tabs table {
-  margin-bottom: 20px;
-}
-/* line 231, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 250, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #installation-tabs table tr {
   text-align: left;
 }
-/* line 233, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 252, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #installation-tabs table tr:nth-child(2n) {
   background: #fbfbfb;
 }
-/* line 236, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 255, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #installation-tabs table tr:nth-child(2n+1) {
   background: #f7f7f7;
 }
-/* line 239, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 258, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #installation-tabs table tr th, #installation-tabs table tr td {
   border: 1px solid #dddddd;
   padding-top: 5px;
@@ -262,126 +282,126 @@ blockquote > p {
   padding-right: 10px;
 }
 
-/* line 257, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 276, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .features {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 263, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 282, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .features a {
   width: 100%;
   text-align: center;
 }
-/* line 268, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 287, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .features img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 276, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 295, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature img {
   display: block;
   margin-left: 20px;
   margin-right: 20px;
 }
-/* line 281, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 300, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature:nth-child(even) img {
   float: left;
 }
-/* line 284, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 303, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature:nth-child(odd) img {
   float: right;
 }
-/* line 287, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 306, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature .featureContent, .feature .hero-unit {
   padding: 30px;
 }
 
-/* line 292, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 311, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .featureContent p {
   text-align: justify;
 }
 
-/* line 297, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 316, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .features-separator hr {
   clear: both;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-/* line 303, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 322, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature-menu {
   padding-top: 20px;
 }
-/* line 305, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 324, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature-menu li {
   display: inline;
   padding-right: 30px;
 }
-/* line 309, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 328, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .feature-menu li h4 {
   display: inline;
 }
 
-/* line 316, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 335, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #featureTab {
   line-height: 40px;
   margin-top: 20px;
 }
-/* line 320, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 339, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 #featureTab ul {
   margin-bottom: 0px;
 }
 
-/* line 336, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 355, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post {
   padding-left: 0px;
   padding-right: 0px;
   text-align: left;
 }
-/* line 341, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 360, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post:last-child hr {
   display: none;
 }
-/* line 346, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 365, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper img {
   float: left;
   margin-right: 10px;
 }
-/* line 350, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 369, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title {
   padding-bottom: 5px;
 }
-/* line 352, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 371, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title.border {
   border-bottom: 1px solid #CCC;
 }
-/* line 355, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 374, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title h3 {
   text-decoration: none;
   margin-bottom: 0px;
 }
-/* line 360, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 379, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title h4 {
   text-decoration: none;
   margin-bottom: 0px;
 }
-/* line 365, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 384, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title .author {
   color: #777;
 }
-/* line 368, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 387, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title .tags {
   color: #777;
 }
-/* line 371, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 390, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .title-wrapper .title .icon-tags {
   display: inline;
 }
-/* line 376, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 395, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post pre {
   max-height: none;
   margin-top: 10px;
@@ -391,42 +411,47 @@ blockquote > p {
   margin-right: 0px;
   background-image: none;
 }
-/* line 386, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 405, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .body {
   margin-bottom: 20px;
   margin-top: 20px;
   clear: both;
 }
-/* line 391, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 410, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .body h1 {
   font-size: 20px;
   text-decoration: none;
   text-align: left;
   color: #4A5D75;
 }
-/* line 394, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 413, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .body h2 {
   font-size: 18px;
   text-decoration: none;
   text-align: left;
   color: #4A5D75;
 }
-/* line 397, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 416, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .body h3 {
   font-size: 16px;
   text-decoration: none;
   text-align: left;
   color: #4A5D75;
 }
-/* line 403, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 422, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .navigation hr {
   display: block;
 }
-/* line 406, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 425, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .navigation .previous {
   text-align: left;
 }
-/* line 409, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+/* line 428, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
 .post .navigation .next {
   text-align: right;
+}
+/* line 435, /Users/xcoulon/code/jbosstools/jbosstools-website/stylesheets/jbt-styles.scss */
+.post .admonitionblock table td {
+  border: 1px solid #656565;
+  padding: 1em;
 }

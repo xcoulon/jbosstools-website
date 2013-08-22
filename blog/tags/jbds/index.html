@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JBoss Tools</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="http://xcoulon.github.com/jbosstools-website/stylesheets/bootstrap-community.css" media="screen" rel="stylesheet">
+    <!-- IE 6-8 support of HTML 5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
+    <![endif]-->
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/tools/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="http://xcoulon.github.com/jbosstools-website/stylesheets/jbt-styles.css" rel="stylesheet" type="text/css">
+    <link href="http://xcoulon.github.com/jbosstools-website/fonts/font-awesome/font-awesome.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!-- Defines the project banner. Change these URLs to your specific project folder on static.jboss.org -->
+    <style>
+      @media (min-width: 980px) {
+        .banner { background-image: url(http://static.jboss.org/images/tools/tools-banner-1180px.png); height: 110px;  }
+      }
+      @media (max-width: 979px) {
+        .banner { background-image: url(http://static.jboss.org/images/tools/tools-logo.png); background-repeat:no-repeat; height: 60px; }
+      }
+      @media (max-width: 650px) {
+        .banner { width: 200px; margin: 0px auto; }
+      }
+    </style>
+    <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
+  </head>
+  <body>
+    <!-- begin accesibility skip to top -->
+    <ul class="visuallyhidden" id="top">
+      <li>
+        <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+      </li>
+      <li>
+        <a accesskey="c" href="#page" title="Skip to content">Skip to content</a>
+      </li>
+    </ul>
+    <div class="container" id="content">
+      <div class="dropup">
+        <a class="tabnav-closed" href="https://www.jboss.org" id="tab">Red Hat</a>
+      </div>
+      <div class="banner">
+        <a href="#"></a>
+      </div>
+      <div class="navbar navbar-inverse" id="navbar-fix">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li id="home"><a href="http://xcoulon.github.com/jbosstools-website/">Home</a></li>
+                <li id="downloads"><a href="http://xcoulon.github.com/jbosstools-website/downloads/">Downloads</a></li>
+                <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/features">Features</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/whatsnew">What's New</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/guides/videos.html">Video Tutorials</a></li>
+                  <li><a href="http://docs.jboss.org/tools/4.1.0.Final/">Reference Guides</a></li>
+                </ul></li>
+                <li class="dropdown" id="community">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://xcoulon.github.com/jbosstools-website/contribute.html">Contribute</a></li>
+                    <li><a href="http://www.jboss.org/community/docs/DOC-10794">Wiki</a></li>
+                    <li><a href="http://community.jboss.org/community/tools?view=discussions">User Forum</a></li>
+                    <li><a href="https://lists.jboss.org/mailman/listinfo/jbosstools-dev">Mailing Lists</a></li>
+                    <li><a href="irc://irc.freenode.org/jbosstools">Chat</a></li>
+                    <li id="blog"><a href="http://xcoulon.github.com/jbosstools-website/blog/">Blog</a></li>
+                  </ul>
+                </li>
+                <li id="issuetracker"><a href="https://issues.jboss.org/browse/JBIDE">Issues</a></li>
+                <li id="sourcecode"><a href="https://github.com/jbosstools">Source Code</a></li>
+                <li id="build"><a href="http://hudson.jboss.org/hudson/view/JBossTools/view/JBossTools_Trunk/">Build</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Us <b class="caret"></b></a>
+                  <ul class="dropdown-menu projectsocialmedia">
+                    <li><a href="http://twitter.com/jbosstools"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_twitter.png"></a></li>
+                    <li><a href="https://plus.google.com/109915195368578219327"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_googleplus.png"></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- activate the tab by adding the 'active' class -->
+      <script>
+        document.getElementById("community").className += " active";
+      </script>
+      <div id="content-wrapper">
+        <div class="posts-header">
+          <h1>Articles tagged with "jbds"</h1>
+        </div>
+        <div class="row-fluid">
+          <div class="span12 posts" id="core-page">
+            <div class="post">
+              <div class="title-wrapper">
+                <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
+                <div class="title">
+                  <h3>
+                    <a href="http://xcoulon.github.com/jbosstools-website/blog/2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
+                  </h3>
+                  <div class="author">
+                    <!-- there is only one author per post but the author splitter adds an array here -->
+                    posted by
+                    <strong>Fred Bricon</strong>
+                    on
+                    <strong>Jul 23, 2013.</strong>
+                    <a class="label label-info" href="http://xcoulon.github.com/jbosstools-website/blog/tags/jbosstools/">jbosstools</a>
+                    <a class="label label-info" href="http://xcoulon.github.com/jbosstools-website/blog/tags/jbds/">jbds</a>
+                    <a class="label label-info" href="http://xcoulon.github.com/jbosstools-website/blog/tags/mobile/">mobile</a>
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div id="preamble">
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>On behalf of the JBoss Tools and Developer Studio team, I&#8217;m extremely proud to announce the general availability of the JBoss Tools 4.1.0.Final and Red Hat JBoss Developer Studio 7.0.0.GA releases.</p>
+                </div>
+                <div class="paragraph">
+                <p>JBoss Tools is a set of plugins for Eclipse that complements, enhances and goes beyond the support that exists for JBoss and related technologies in the default Eclipse distribution.</p>
+                </div>
+                <div class="paragraph">
+                <p>Red Hat JBoss Developer Studio is a fully bundled Eclipse distribution which not only includes the majority of JBoss Tools but also all its needed dependencies and 3rd party plugins allowing for an easy one-click and no-fuss installation.</p>
+                </div>
+                <div class="paragraph">
+                <p>If you are into doing your own bleeding edge Eclipse plugin assembly, JBoss Tools is for you; if you are more into having something that "Just Works" then JBoss Developer Studio is the way to go.</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_installation">Installation</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>JBoss Developer Studio is available with a <a href="http://devstudio.jboss.com/earlyaccess">one-download-installer</a> with everything bundled and configured out of the box.</p>
+                </div>
+                <div class="paragraph">
+                <p>You can also install JBoss Developer Studio or JBoss Tools from Eclipse Marketplace via "Help &gt; Eclipse Marketplace&#8230;"</p>
+                </div>
+                <div class="paragraph">
+                <p>When installing from Eclipse Marketplace we recommend using a fresh <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplerr">Eclipse 4.3 JEE Bundle</a> since then you&#8217;ll have most of the dependencies pre-installed.</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>SOA tooling for BPEL, Drools, Guvnor, jBPM, ESB, Modeshape, pi4soa, Savara, SwitchYard &amp; Teiid, in future referred collectively as the JBoss Tools or JBoss Developer Studio Integration Stack (JBT-IS or JBDS-IS), are not yet available for this release. They will become available separately later. If you wish to use these today we recommend you continue to use JBoss Tools 3.3 or JBoss Developer Studio 5.0, or try one installing the latest unsupported nightly build from this update site:</p>
+                </div>
+                <div class="paragraph">
+                <p><a href="http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/">http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/</a></p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_performance_and_stability_improvements">Performance and stability improvements</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>JBoss Tools 4.1.0 and JBDS 7.0 are built on top of Eclipse Kepler (e4.3), which brought noticeable performance and stability improvements over the previous Juno version (e4.2). But we also improved the performance in some of our own features (Central, JAX-RS tooling, Web Service testing).</p>
+                </div>
+                <div class="paragraph">
+                <p>We worked really hard to fix more than <a href="https://issues.jboss.org/issues/?jql=(project%20%3D%20JBIDE%20AND%20fixVersion%20in%20(%224.1.0.CR1%22%2C%20%224.1.0.Beta2%22%2C%20%224.1.0.Beta1%22%2C%20%224.1.0.Alpha2%22%2C%20%224.1.0.Alpha1%22%2C%20%224.1.0.Final%22)%20OR%20project%20%3D%20JBDS%20AND%20fixVersion%20in%20(%227.0.0.CR1%22%2C%20%227.0.0.Beta2%22%2C%20%227.0.0.Beta1%22%2C%20%227.0.0.Alpha2%22%2C%20%227.0.0.Alpha1%22%2C%20%227.0.0.GA%22%2C%20%227.0.0.Final%22))%20AND%20resolution%20not%20in%20(Unresolved)%20ORDER%20BY%20fixVersion%20DESC">1600 bugs and feature enhancements</a> into this release.</p>
+                </div>
+                <div class="paragraph">
+                <p>We have so much good stuff this time around, it&#8217;s hard to cram everything into a (readable) blog post, so I&#8217;ll just present the major features we have here, introduced since JBoss Tools 4.0 and JBDS 6.0. But make sure to read the complete <a href="http://docs.jboss.org/tools/whatsnew/">New and Noteworthy</a> for a more detailed and complete overview.</p>
+                </div>
+                <div class="paragraph">
+                <p>TL;DR: The recurring theme of this release is "HTML5 and mobile development". Burr Sutter made a screencast highlighting several of the new features available in this release :</p>
+                </div>
+                <div class="videoblock">
+                
+                <div class="content">
+                <video src="http://player.vimeo.com/video/67480300" height="300" controls>
+                Your browser does not support the video tag.
+                </video>
+                </div>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_livereload">LiveReload</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Probably the coolest new features we have, the new LiveReload server allows you to have your browser automatically refresh when you save your html, javascript and css files.You can just focus on content and functionality and instantly see and use the changes in your browser. If it is hard to imagine how it works, <a href="https://twitter.com/xcoulon">Xavier Coulon</a> made a video showing how to activate and use it (on the right).</p>
+                </div>
+                <div class="paragraph">
+                <p>You should install a LiveReload plugin/extension into your browser as documented in our <a href="http://docs.jboss.org/tools/whatsnew/livereload/livereload-news-1.0.0.Alpha2.html">What’s New and Noteworthy</a>. If you can&#8217;t, don&#8217;t worry, keep reading.</p>
+                </div>
+                <div class="paragraph">
+                <p>LiveReload supports local (i.e. file:// based urls) or content served out from an application server. In the latter case, the browser will reload once the files are published on the application server, especially useful when editing JSF content like xhtml.</p>
+                </div>
+                <div class="paragraph">
+                <p>You can right-click on files in the Project Explorer view or on modules deployed to a server, to load your Browser with a LiveReload enabled page. This action will setup the LiveReload server for you if it does not already exist :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/open-with-livereload.png" alt="open-with-livereload">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>Our server implements the <a href="http://feedback.livereload.com/knowledgebase/articles/86174-livereload-protocol">existing defacto protocol</a> used by the original LiveReload and related plug-ins, meaning any browser, script and tool that works with live reload today should work with our Eclipse implementation of it.</p>
+                </div>
+                <div class="paragraph">
+                <p>It&#8217;s really nice to have instant feedback for HTML5/JS based applications. But wait, it&#8217;s getting even better.</p>
+                </div>
+                <div class="sect2">
+                <h3 id="_proxying_and_open_in_external_device">Proxying and Open in external Device</h3>
+                <div class="paragraph">
+                <p>If your browser does not have the LiveReload plugin, like Safari or you&#8217;re using a mobile device, you would normally manually add a livereload.js loading snippet in every web page. That can be tedious and requires changes to files you might not want to commit to your source repository. It&#8217;s alright. Please meet our "LiveReload Proxying" :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/LiveReload_open_in_web_browser_via_qrcode-dialog.png" alt="LiveReload_open_in_web_browser_via_qrcode-dialog">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>It is enabled by checking "Inject the livereload.js script in HTML pages" in the LiveReload Server configuration. This allows you to proxy your file:// urls and have them served out on localhost:35729/&lt;projectname&gt;/&lt;filepath&gt; (or any other port if you choose so in the LiveReload Server configuration) .</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>For security reasons, remote connections are disabled by default, so if you want mobile devices to be able to load the page, just enable "Allow Remote Connections".</p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                <div class="paragraph">
+                <p>Now, typing a complex, long url on a mobile device can be tedious, so in order to make your life even easier, we&#8217;ve added a "Show In &gt; Web Browser on External device&#8230;" menu. This will display a QR code for the LiveReload enabled url. Simply use a QR reader application and have the webpage load on your device. Watch your pages reload as you make the modifications in your IDE, it&#8217;s close to black magic!</p>
+                </div>
+                
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_html5_jquery_mobile_palette">HTML5/JQuery Mobile Palette</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>To further improve your HTML5 / mobile development experience, we’ve added a new HTML5 palette with initial support for JQuery Mobile widgets. This palette will show up when you edit HTML5 files (files with <code>&lt;!DOCTYPE HTML&gt;</code> doc type). If it does not show up, it is probably using HTML4 or XHTML content types.</p>
+                </div>
+                <div class="paragraph">
+                <p>The JQuery Mobile palette features a dialog preview when you click or drag one of the buttons for a component, it lets you see and customize what will be inserted :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/lf.png" alt="lf">
+                </div>
+                
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/set.png" alt="set">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>Alexey Kazakov <a href="http://www.screenr.com/embed/7M57">recorded a video</a> to show it in action.</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_browsersim_goodies">BrowserSim goodies</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>BrowserSim is a mobile web browser simulator, used to test your web pages on mobile devices with a realistic mobile device skin.</p>
+                </div>
+                <div class="paragraph">
+                <p>Now guess what? your mobile application development experience just scored 11. In this release, we&#8217;ve added a bunch of really exciting features, available with a right-click on the device bezel :</p>
+                </div>
+                <div class="ulist">
+                
+                <ul>
+                <li>
+                <p>synched browsing : open the same web page in 2 different but synchronized browsers. You can test horizontal and landscape modes at the same time or view how layout behaves on different devices simultaneously.</p>
+                </li>
+                <li>
+                <p>screenshot : easily take screenshots to share your awesome design or nasty bug you want someone to hunt down.</p>
+                </li>
+                <li>
+                <p>debugging facilities : use Firebug Lite for easy local debugging, or debug remotely using any Weinre compatible server to debug/inspect the application running in BrowserSim.</p>
+                </li>
+                <li>
+                <p>new skins galore</p>
+                </li>
+                </ul>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/browsersim-firebug.png" alt="browsersim-firebug">
+                </div>
+                
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>Please note BrowserSim must be launched with a 32bits JRE (you can now select it in JBossTools &gt; BrowserSim / Cordova preferences) and Safari must be installed on your machine.</p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_windows_64_bit_visual_page_editor">Windows 64-bit Visual Page Editor</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>A long standing issue for our Visual Page Editor was the lack of proper Windows 64-bit XULRunner integration.</p>
+                </div>
+                <div class="paragraph">
+                <p><a href="https://community.jboss.org/people/carsten.pfeiffer">Carsten Pfeiffer</a> did an awesome contribution and made this happen. If you&#8217;re using Windows 64 bit, and if you follow the <a href="https://community.jboss.org/docs/DOC-10862">JBoss Tools Visual Editor FAQ link</a>, you will be told to try to install XULRunner from <a href="http://download.jboss.org/jbosstools/builds/staging/xulrunner-1.9.2_win64/all/repo/">http://download.jboss.org/jbosstools/builds/staging/xulrunner-1.9.2_win64/all/repo/</a></p>
+                </div>
+                <div class="paragraph">
+                <p>Hopefully you should see the following, before and after installing the proper XulRunner version :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/missing-xulrunner.png" alt="missing-xulrunner">
+                </div>
+                
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/win64.png" alt="win64">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>We would love to hear if this works for you on Windows 64-bit or if you still see problems. You can give your feedback on <a href="https://issues.jboss.org/browse/JBIDE-2720">this bug</a>.</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_hybrid_mobile_via_apache_cordova_experimental">Hybrid Mobile via Apache Cordova (Experimental)</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>If real, cross-platform Mobile application development is your thing, we now have experimental support for developing Hybrid mobile applications with Apache Cordova.</p>
+                </div>
+                <div class="paragraph">
+                <p>You can create an "Hybrid Mobile" project and test and develop it using the Android SDK and XCode for iOS testing.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/runConfigs.png" alt="runConfigs">
+                </div>
+                
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>This is only available as Experimental in JBoss Tools, not part of Developer Studio (yet)</p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_cordovasim_experimental">CordovaSim (Experimental)</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>To help testing hybrid mobile development we&#8217;ve extended our BrowerSim to use Ripple to provide a way to do portable testing (meaning you do not necessarily need Android or XCode installed to do development)</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/CordovaSim-demo.png" alt="CordovaSim-demo">
+                </div>
+                
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>This is only available as Experimental in JBoss Tools, not part of Developer Studio (yet)</p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_forge_integration">Forge integration</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>The majority of the feedback we got for the awesome integration of Forge into Eclipse was that many preferred to use a wizard over only having access to a "command line style" UI.</p>
+                </div>
+                <div class="paragraph">
+                <p>We listened to you and added new wizards, to give an Eclipse front-end to the following Forge features:</p>
+                </div>
+                <div class="ulist">
+                
+                <ul>
+                <li>
+                <p>Generate Entities from existing tables</p>
+                </li>
+                <li>
+                <p>Generate REST Endpoint from Entities</p>
+                </li>
+                <li>
+                <p>Scaffold UI (JSF or AngularJS based) from Entities</p>
+                </li>
+                </ul>
+                </div>
+                <div class="paragraph">
+                <p>You will find these wizards - which are Technology Preview as of this release - under "File &gt; New &gt; JBoss Tools":</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/new-forge-based-wizards.png" alt="new-forge-based-wizards">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>Make sure you read a detailed description of these wizard in <a href="http://docs.jboss.org/tools/whatsnew/forge/forge-news-4.1.0.Beta2.html">Forge What&#8217;s New</a>. Oh and to make it all work, we now embed the Forge 1.3.3.Final runtime.</p>
+                </div>
+                <div class="paragraph">
+                <p>Please note these wizards are considered <strong>Technology Preview</strong>, thus, even though they&#8217;re included, are not supported in JBoss Developer Studio.</p>
+                </div>
+                <div class="paragraph">
+                <p>The long term goal is to get a closer integration between Forge and Eclipse. This is a current work in progress with Forge 2, which is now available as an <em>experimental</em> download for JBoss Tools</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_arquillian_experimental">Arquillian (Experimental)</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Arquillian Eclipse is a new JBoss Tools component that makes Java EE integration testing using <a href="http://arquillian.org/">Arquillian</a> easier. The Arquillian support can be added/removed by right-clicking the project and selecting Configure&gt;Add/Remove Arquillian support.</p>
+                </div>
+                <div class="paragraph">
+                <p>The project has to be a Maven (m2e) project. The "Add Arquillian Support" action adds the Arquillian nature to the project as well as arquillian artifacts (bom, dependencies, required plugins, profiles &#8230;) to the project&#8217;s pom.xml. The Remove Arquillian Support removes the Arquillian nature, but doesn&#8217;t change the project&#8217;s pom.xml.</p>
+                </div>
+                <div class="paragraph">
+                <p>A new "Arquillian JUnit Test Case" wizard, based on the JUnit Test Case wizard, adds the following to a created class:</p>
+                </div>
+                <div class="ulist">
+                
+                <ul>
+                <li>
+                <p>@RunWith(Arquillian.class) annotation</p>
+                </li>
+                <li>
+                <p>the deployment method</p>
+                </li>
+                </ul>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/arquillian-junit-1.png" alt="arquillian-junit-1">
+                </div>
+                
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/arquillian-test-3.png" alt="arquillian-test-3">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>Enabling Arquillian support also brings you validation, navigation across arquillian resources, launch configuration&#8230; You&#8217;ll most certainly want to read a more complete overview of the Arquillian support <a href="http://docs.jboss.org/tools/whatsnew/arquillian/arquillian-news-4.1.0.Beta1.html">here</a>.</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <div class="title">Note</div>
+                </td>
+                <td class="content">
+                
+                <div class="paragraph">
+                <p>This is only available as Experimental in JBoss Tools, not part of Developer Studio (yet)</p>
+                </div>
+                
+                </td>
+                </tr>
+                </table>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_openshift">OpenShift</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>OpenShift Tools received a good deal of improvements, usability wise. Improved UI, more explicit labels where needed, but more importantly:</p>
+                </div>
+                <div class="sect2">
+                <h3 id="_git_output_streaming">Git output streaming</h3>
+                <div class="paragraph">
+                <p>Ever since we added OpenShift support to Eclipse we&#8217;ve had the problem that EGit did not allow streaming of console output when performing a push.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/publishing-to-openshift.png" alt="publishing-to-openshift">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>This mean that when doing a long running push Eclipse would just have a blank console and show "Push in progress".</p>
+                </div>
+                <div class="paragraph">
+                <p>In Kepler, EGit now includes our contribution of allowing this meaning Git users and OpenShift users can and will get streaming of the console output. You can now see what is going on.</p>
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_restart_openshift_application">Restart OpenShift Application</h3>
+                <div class="paragraph">
+                <p>We&#8217;ve added "Restart" to the UI, allowing you to trigger a node restart for your application in case something bad has happened or you changed a configuration that requires a full node restart.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/restart-application.png" alt="restart-application">
+                </div>
+                
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_create_application_from_a_remote_repository">Create application from a remote repository</h3>
+                <div class="paragraph">
+                <p>Opening the advanced section of the New OpenShift Appliction wizard, you can now create an application directly seeded from a remote git repository (github for instance) instead of forcing you to use git recursive merges locally.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/advanced-source-code.png" alt="advanced-source-code">
+                </div>
+                
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_configure_openshift_markers">Configure OpenShift markers</h3>
+                <div class="paragraph">
+                <p>OpenShift is using markers to enable or disable features. These markers are hidden files added to the &lt;project&gt;/.openshift/markers directory. You can now add/remove/edit these markers by invoking a wizard from the OpenShift &gt; Configure Markers&#8230; menu in th Project- or Package-Explorer.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/configure-markers-wizard.png" alt="configure-markers-wizard">
+                </div>
+                
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_application_creation_logs">Application creation logs</h3>
+                <div class="paragraph">
+                <p>When creating applications you want to know about the credentials that OpenShift initially set for you. This is especially helpful and required when you create a jenkins where you get its url and username/password presented. We now display what OpenShift did for you if there&#8217;s anything to be noticed for any type of application and/or cartridge.</p>
+                </div>
+                
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_jboss_central">JBoss Central</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>JBoss Central, the welcome screen of JBDS / JBoss Tools has a new design. We&#8217;ve tried to make it easier for you to get started building new applications, providing more samples, displaying descriptions of what each wizard gives you.</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/jboss_central.png" alt="jboss_central">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>You can also access wizards for features you haven&#8217;t installed yet, such as the OpenShift Application. You&#8217;ll be prompted to install the required OpenShift Tools feature if you haven&#8217;t installed it already.</p>
+                </div>
+                <div class="paragraph">
+                <p>In the software/update tab, you&#8217;ll find we have added VJet, a promising new JavaScript editor, which should help you build, you know, HTML5 and mobile applications.</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_servers_and_runtimes">Servers and runtimes</h2>
+                <div class="sectionbody">
+                <div class="sect2">
+                <h3 id="_new_server_adapters">New server adapters</h3>
+                <div class="ulist">
+                
+                <ul>
+                <li>
+                <p>JBoss EAP 6.1, freely available to developers (you can get it from the JBoss AS download page), now has its own server adapter.</p>
+                </li>
+                <li>
+                <p>WildFly now also has its own dedicated server adapter. Please note it&#8217;s still considered experimental as WildFly itself is not stabilized to this day. We recommend using the latest Alpha-3 release, which fixes some file locking issue on windows and now support JSP development mode.</p>
+                </li>
+                </ul>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/new-server-adapters.png" alt="new-server-adapters">
+                </div>
+                
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_better_server_identification">Better server identification</h3>
+                <div class="paragraph">
+                <p>Servers derived from JBoss AS 7.x (JPP, SOA-P, GateIn), are now properly identified, making searching runtimes easier to setup. We now reuse the stacks.yml descriptor provided by the JBoss Developer Framework to provide downloads of different runtimes and thus providing a consistent experience, as part of the JBoss Way initiative.</p>
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_better_server_management">Better server management</h3>
+                <div class="paragraph">
+                <p>Server tools now uses the AS 7.x/EAP/WildFly management api, allowing for faster and more reliable (re)starts of servers, as well as better module management (individual module restart, status information).</p>
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_tomcat_runtime_detection_jboss_tools_only">Tomcat runtime detection (JBoss Tools only)</h3>
+                <div class="paragraph">
+                <p>A new Tomcat runtime feature detection allows you to automatically detect and create tomcat-based servers, after scanning a specified server directory.</p>
+                </div>
+                
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_maven_integration">Maven Integration++</h2>
+                <div class="sectionbody">
+                <div class="sect2">
+                <h3 id="_m2e_1_4_0_and_m2e_wtp_1_0_0">m2e 1.4.0 and m2e-wtp 1.0.0</h3>
+                <div class="ulist">
+                
+                <ul>
+                <li>
+                <p>JBDS comes with m2e 1.4.0 which brings some performance enhancements, as well as a very convenient Alt-F5 shortcut, to update project configuration, when it&#8217;s gone out-of-synch.</p>
+                </li>
+                <li>
+                <p>we contributed the JBoss JPA/JSF/JAX-RS configurators to the <a href="http://www.eclipse.org/m2e-wtp/">m2e-wtp project at eclipse.org</a>, which just graduated from the Eclipse Incubator into version 1.0.0, adding support to Java EE 7.</p>
+                </li>
+                </ul>
+                </div>
+                <div class="paragraph">
+                <p>In this Kepler release the configuration of these configurators moved under the Preferences &gt; Maven &gt; Java EE Integration.</p>
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_automatic_source_lookup_for_the_masses">Automatic Source Lookup for the masses</h3>
+                <div class="paragraph">
+                <p>Ever tasted m2e&#8217;s awesome automatic source download but were frustrated when going back to work on legacy, non-maven projects? Then rejoice, we now enable automatic source lookup for <strong>all</strong>, <strong>non-maven</strong> java projects.</p>
+                </div>
+                <div class="paragraph">
+                <p>The automatic Source Lookup feature is based on Maven/m2e. As such, downloaded sources will be stored under your local Maven repository.</p>
+                </div>
+                <div class="paragraph">
+                <p>Since JDT doesn&#8217;t support variables in source attachments (such as M2_REPO), source attachments use absolute (non-portable) paths. It&#8217;s ok when the jar is part of a Classpath Library, since the path is stored in your own workspace. But it can become a problem if your jar dependency is listed in your project&#8217;s .classpath descriptor, potentially shared with other developers. For this reason, by default, you&#8217;ll be warned when a compatible source has been found :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/automatic-source-lookup.png" alt="automatic-source-lookup">
+                </div>
+                
+                </div>
+                <div class="paragraph">
+                <p>The good news is the source lookup mechanism is capable of fixing bad source attachements, even for Maven enabled projects. If the attached source doesn&#8217;t exist (ex. you wiped out your maven local repository or shared hard-coded source attachments in your scm) or doesn&#8217;t contain the right source files, it will try to download the proper source.</p>
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_maven_repository_edition">Maven repository edition</h3>
+                <div class="paragraph">
+                <p>Maven Repositories defined in profiles in your settings.xml (Window &gt; Preferences &gt; JBoss Tools &gt; Maven Integration &gt; Configure Maven Repositories&#8230;) can now be edited with the "Edit Repository&#8230;" button :</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="/images/blog/edit-maven-repositories.png" alt="edit-maven-repositories">
+                </div>
+                
+                </div>
+                
+                </div>
+                <div class="sect2">
+                <h3 id="_and_much_more">And much more&#8230;</h3>
+                <div class="paragraph">
+                <p>There&#8217;s not enough room here to list all the great things the team managed to pull. Better JAX-RS tooling performance, JSF 2.2 and updated Deltaspike support, improved web service tester (now using JBoss Wise). So, again, make sure you take a look at the news and screenshots in our <a href="http://docs.jboss.org/tools/whatsnew">What&#8217;s New</a> page.</p>
+                </div>
+                
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_giving_feedback">Giving Feedback</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Please don&#8217;t hesitate to use our forum to ask questions, or, if you have ideas to better improve JBoss Tools / JBDS, or found a bug, then open an issue in our <a href="https://jira.jboss.org/jira/browse/JBIDE">issue tracker</a>.</p>
+                </div>
+                
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_what_s_next">What&#8217;s Next ?</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>First, some of us are gonna take a tiny bit of rest in the coming weeks. Then we&#8217;ll work on a service release, mainly focused on bug fixes, to accompany the Eclipse Kepler SR1 release in september. Hopefully, new features should see the light of day by the end of the year.</p>
+                </div>
+                <div class="paragraph">
+                <p>Have fun!</p>
+                </div>
+                <div class="paragraph">
+                <p>Fred Bricon<br>
+                <a href="https://twitter.com/fbricon">https://twitter.com/fbricon</a></p>
+                </div>
+                
+                </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+          <!--
+            <div class="span3">
+              <div class="menu-level3">
+                <h4>Recent Posts</h4>
+                <ul>
+                  <li>
+                    <a href="http://xcoulon.github.com/jbosstools-website/blog/2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
+                  </li>
+                  <li>
+                    <a href="http://xcoulon.github.com/jbosstools-website/blog/2012/09/17/return-of-jboss-tools.html">The Return of JBoss Tools</a>
+                  </li>
+                  <li>
+                    <a href="http://xcoulon.github.com/jbosstools-website/blog/2012/08/24/show-domain-info-openshift-java-client-in-a-nutshell.html">show-domain-info: openshift-java-client in a nutshell</a>
+                  </li>
+                  <li>
+                    <a href="http://xcoulon.github.com/jbosstools-website/blog/2012/08/22/summer-time-with-new-release-soa-tools-and-a-bit-of-juno-and-fedora-news.html">Summer time with new release, SOA tools and a bit of Juno and Fedora news</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          -->
+        </div>
+        <div class="row-fluid">
+          <div class="span12 center">
+            <hr>
+            <div class="pagination">
+              <ul>
+                <li class="disabled">
+                  <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                  <a href="#">1</a>
+                </li>
+                <li class="disabled">
+                  <a href="#">&raquo;</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container">
+      <div class="row-fluid">
+        <div class="span2 offset1">
+          <h4>Navigate</h4>
+          <ul>
+            <li>
+              <a href="http://xcoulon.github.com/jbosstools-website" title="Overview">Overview</a>
+            </li>
+            <li>
+              <a href="http://xcoulon.github.com/jbosstools-website/download" title="Download">Download</a>
+            </li>
+            <li>
+              <a href="http://xcoulon.github.com/jbosstools-website/usage" title="Usage">Usage</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="http://xcoulon.github.com/jbosstools-website/blog" title="Blog">Blog</a>
+            </li>
+            <li>
+              <a href="http://twitter.com/jbosstools" title="Twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/109915195368578219327" title="Google+">Google+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Contribute</h4>
+          <ul>
+            <li>
+              <a href="https://issues.jboss.org/browse/JBIDE" title="Submit a bug">Submit a bug</a>
+            </li>
+            <li>
+              <a href="https://github.com/jbosstools" title="Write code">Write Code</a>
+            </li>
+            <li>
+              <a href="#" title="Ask questions on the forum">Ask questions on the forum</a>
+            </li>
+            <li>
+              <a href="#" title="Talk on IRC">Talk with us on IRC</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3 offset1">
+          <h4>Licenses</h4>
+          <p>All plugins are available under the Eclipse Public License (EPL).</p>
+          <p>They may also contain some libraries licensed under certain open source licenses such as EPL, LGPL, and/or certain other open source licenses.</p>
+          <p></p>
+          <div class="jbossbadge">
+            <a href="http://www.jboss.org/">
+              <img src="http://static.jboss.org/theme/images/common/jbossbadge.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container" id="companyfooter">
+      <div class="redhatlogo">
+        <div id="logospacer"></div>
+        <a href="http://www.redhat.com/"><img src="http://static.jboss.org/theme/images/common/redhat_logo.png"></a>
+      </div>
+    </div>
+    <span class="backToTop">
+      <a href="#top">back to top</a>
+    </span>
+    <script src="http://xcoulon.github.com/jbosstools-website/javascripts/bootstrap-community.js"></script>
+  </body>
+</html>
