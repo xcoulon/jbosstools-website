@@ -35,12 +35,16 @@ module Awestruct
 
 
       def findInPages(path)
-        for page in site.pages
-          if page.output_path.eql?(path)
-            return page
+        if(defined?(site.pages_by_output_path).nil?)
+          puts 'Creating index of pages by output path'
+          #site.pages_by_output_path = Hash.new
+          for page in site.pages
+            puts 'Add ' + page.output_path + ' to index'
+            site.pages_by_output_path[page.output_path] = page
           end
+        else
+          return site.pages_by_output_path[path]
         end
-        return nil
       end
 
       def generateAnchorHtml(page)
