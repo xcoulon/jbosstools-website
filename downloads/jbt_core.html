@@ -61,18 +61,18 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li id="home"><a href="..">Home</a></li>
-                <li id="downloads"><a href="../downloads">Downloads</a></li>
+                <li id="downloads"><a href="http://xcoulon.github.com/jbosstools-website/downloads/">Downloads</a></li>
                 <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="../features">Features</a></li>
-                  <li><a href="../whatsnew">What's New</a></li>
-                  <li><a href="../guides/videos.html">Video Tutorials</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/features}">Features</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/whatsnew}">What's New</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/guides/videos.html">Video Tutorials</a></li>
                   <li><a href="http://docs.jboss.org/tools/4.1.0.Final/">Reference Guides</a></li>
                 </ul></li>
                 <li class="dropdown" id="community">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="../contribute.html">Contribute</a></li>
+                    <li><a href="http://xcoulon.github.com/jbosstools-website/contribute.html">Contribute</a></li>
                     <li><a href="http://www.jboss.org/community/docs/DOC-10794">Wiki</a></li>
                     <li><a href="http://community.jboss.org/community/tools?view=discussions">User Forum</a></li>
                     <li><a href="https://lists.jboss.org/mailman/listinfo/jbosstools-dev">Mailing Lists</a></li>
@@ -105,60 +105,76 @@
                 >Downloads</a> / <a class='breadcrumb_anchor active' href='http://xcoulon.github.com/jbosstools-website/downloads/jbt_core.html'
                 >JBoss Tools</a></div>
         <div class="row-fluid">
-          <div class="span12 center">
-            <h2>Download JBoss Tools</h2>
+          <div class="span10 offset1">
+            <div class="dropdown float-right">
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#" id="download_version">
+                Download another version
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" id="downloadable_versions_menu_items" role="menu">
+                <li id="jbt_core_410_installation_menu_item">
+                  <a data-toggle="tab" href="#jbt_core_410_installation" role="version_selection">
+                    <span>
+                      version 4.1.0
+                    </span>
+                    <span class="label label-stable_releases">
+                      Stable
+                    </span>
+                  </a>
+                </li>
+                <li id="jbt_core_42x_nightly_installation_menu_item">
+                  <a data-toggle="tab" href="#jbt_core_42x_nightly_installation" role="version_selection">
+                    <span>
+                      version 4.2
+                    </span>
+                    <span class="label label-nightly_builds">
+                      Nightly
+                    </span>
+                  </a>
+                </li>
+                <li id="jbt_core_401_installation_menu_item">
+                  <a data-toggle="tab" href="#jbt_core_401_installation" role="version_selection">
+                    <span>
+                      version 4.0.1.Final
+                    </span>
+                    <span class="label label-archives">
+                      Archive
+                    </span>
+                  </a>
+                </li>
+                <li id="jbt_core_332_installation_menu_item">
+                  <a data-toggle="tab" href="#jbt_core_332_installation" role="version_selection">
+                    <span>
+                      version 3.3.2
+                    </span>
+                    <span class="label label-archives">
+                      Archive
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span10 offset1 center">
+            <h2>
+              Download JBoss Tools
+              <span id="displayed-version"></span>
+            </h2>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span10 offset1 center">
+            <a>Requirements</a>
+            &#124;
+            <a>What's New</a>
+            &#124;
+            <a>Release Note</a>
           </div>
         </div>
         <div class="row-fluid tabbable">
-          <div class="span3" id="downloads-menu">
-            <ul class="nav nav-list" id="downloadable_versions_tabs">
-              <li id="jbt_core_410_installation_tab">
-                <a data-toggle="tab" href="#jbt_core_410_installation">
-                  <span>
-                    Version 4.1.0
-                  </span>
-                  <span class="label label-stable_releases">
-                    Stable
-                  </span>
-                  <i class="icon-chevron-right"></i>
-                </a>
-              </li>
-              <li id="jbt_core_42x_nightly_installation_tab">
-                <a data-toggle="tab" href="#jbt_core_42x_nightly_installation">
-                  <span>
-                    Version 4.2
-                  </span>
-                  <span class="label label-nightly_builds">
-                    Nightly
-                  </span>
-                  <i class="icon-chevron-right"></i>
-                </a>
-              </li>
-              <li id="jbt_core_401_installation_tab">
-                <a data-toggle="tab" href="#jbt_core_401_installation">
-                  <span>
-                    Version 4.0.1.Final
-                  </span>
-                  <span class="label label-archives">
-                    Archive
-                  </span>
-                  <i class="icon-chevron-right"></i>
-                </a>
-              </li>
-              <li id="jbt_core_332_installation_tab">
-                <a data-toggle="tab" href="#jbt_core_332_installation">
-                  <span>
-                    Version 3.3.2
-                  </span>
-                  <span class="label label-archives">
-                    Archive
-                  </span>
-                  <i class="icon-chevron-right"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="span9 tab-content download-instructions">
+          <div class="span10 offset1 tab-content download-instructions">
             <div class="tab-pane" id="jbt_core_410_installation">
               <p>
                 JBoss Tools 4.1.0 was released on 2013-07-22.
@@ -481,7 +497,7 @@
         </div>
         <script>
           $(document).ready(function () {
-            $('#downloadable_versions_tabs a:first').tab('show');
+            $('#downloadable_versions_menu_items a:first').tab('show');
           $('#jbt_core_410_tabs li:not(.disabled):first>a').tab('show');
           $('#jbt_core_42x_nightly_marketplace_tab').addClass('disabled');
           $('#jbt_core_42x_nightly_marketplace_tab>a').removeAttr('data-toggle');
@@ -494,7 +510,13 @@
             $('a[data-toggle=tab]').click(function (e) {
               e.preventDefault();
               $(this).tab('show');
+              if($(this).attr('role') == 'version_selection') {
+                $('.dropdown-menu > li.active').removeClass('active');
+                $('#displayed-version').html($(this).html());
+              }
+              
             });
+            $('#displayed-version').html($('#downloadable_versions_tabs > li.active:first >a').html());
           });
         </script>
       </div>
