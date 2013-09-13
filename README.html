@@ -1,3 +1,273 @@
-<h1>jbosstools-website</h1>
-
-<p>Experiment for jboss.org/tools website base on Awestruct.</p>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A bit of Git, a bit of Ruby and you will get your local tools.jboss.org served.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prerequisites">Prerequisites</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Get <a href="http://git-scm.com/">Git</a></p>
+</li>
+<li>
+<p>Get <a href="http://www.ruby-lang.org/en/">Ruby 1.9.3</a> (part of the RVM install if you follow that path - see below)</p>
+</li>
+<li>
+<p>Get <a href="http://rubygems.org/">RubyGems 1.3.6</a> or above</p>
+</li>
+<li>
+<p>Get <a href="http://www.gnu.org/software/wget/">GNU Wget 1.14</a></p>
+</li>
+<li>
+<p>If on Mac OS, get XCode (needed for native gems)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installation">Installation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_git">Git</h3>
+<div class="paragraph">
+<p>Install Git to your system. <a href="http://help.github.com/">GitHub&#8217;s help page</a> is a good starting
+point. If you are looking for some tips and tricks, checkout <a href="http://in.relation.to/Bloggers/HibernateMovesToGitGitTipsAndTricks">Emmanuel&#8217;s blog</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ruby_via_rvm">Ruby (via RVM)</h3>
+<div class="paragraph">
+<p>Ruby like many other platforms has its dependency hell. We do recommend you use RVM to
+isolate your ruby runtimes as well as dependencies (gems). The RVM steps are optional though.
+If you are not going to use RVM have a look at the different installations <a href="http://www.ruby-lang.org/en/downloads/">options</a> you have.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Install <a href="https://rvm.io">RVM</a>.</p>
+</li>
+<li>
+<p>Set up the isolated environment for the site</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>rvm install 1.9.3
+rvm use 1.9.3
+rvm gemset create jbosstools</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note: the project has a <code>.rvmrc</code> file which will be used by rvm when you
+enter the <code>jbosstools-website</code> directory. This file will assume you have
+the above installed.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_get_the_source">Get the source</h3>
+<div class="paragraph">
+<p>Next, let&#8217;s retrieve the website.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>git clone https://github.com/jbosstools/jbosstools-website
+cd jbosstools-website</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you see a message like this:</p>
+</div>
+<div class="paragraph">
+<p><code>Gemset 'jbosstools' does not exist, 'rvm gemset create jbosstools' first, or
+append '--create'.</code></p>
+</div>
+<div class="paragraph">
+<p>Then it is because you have rvm installed and forgot to run the rvm setup
+above.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_ruby_dependencies">Install Ruby dependencies</h3>
+<div class="paragraph">
+<p>This next step might take some time - it is installing all the required
+dependencies.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>gem install bundler
+bundle install</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if someone updates Awestruct or any dependent gem via the <code>Gemfile</code> dependency
+management, you need to rerun <code>bundle install</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_serve_the_site_locally">Serve the site locally</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Run  <code>rake preview</code></p>
+</li>
+<li>
+<p>Open your browser to <a href="http://localhost:4242">http://localhost:4242</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Any change will be automatically picked up except for changes to <code>_partials</code> files.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You might see warnings at startup like</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>WARNING: Missing required dependency to activate optional built-in extension coffeescripttransform.rb
+  cannot load such file -- coffee-script
+Using profile: development
+Generating site: http://localhost:4242
+Skipping files cache update.
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+CodeRay::Scanners could not load plugin :bash; falling back to :text
+[Listen warning]:
+The blocking parameter of Listen::Listener#start is deprecated.
+Please use Listen::Adapter#start for a non-blocking listener and Listen::Listener#start! for a blocking one.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s ok, it&#8217;s not your fault ;) It&#8217;s related to some Awestruct limitations.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+== guard and livereload</p>
+</div>
+<div class="paragraph">
+<p>You can install guard and its livereload extension to get instant refresh in your browser when pages are regenerated</p>
+</div>
+<div class="paragraph">
+<p>First, open another terminal window and execute the following commands to install the gems:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>gem 'guard'
+gem 'guard-livereload'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, start guard:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>guard start</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, install the LiveReload extension in your browser and click on the button next to the Location to activate the extension.</p>
+</div>
+<div class="paragraph">
+<p>Chrome users can install the v.2.0.9 extension from the <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/details">Chrome Marketplace</a>.</p>
+</div>
+<div class="paragraph">
+<p>Firefox users should use v. 2.0.9 or newer of the LiveReload extension available from <a href="https://github.com/downloads/siasia/livereload-extensions/LiveReload-2.0.9.xpi">here</a>. If you hit an issue where the browser disconnects just after it has connected, which means the server cannot push refresh commands to it, you are using an old plugin and should update it.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 80ef7d3181afb4a866c349cbc9ddbf381be883c0
+== Next steps</p>
+</div>
+<div class="paragraph">
+<p>Using you local site, you can have a look at our <a href="/survival-guide/">survival guide to editing this website</a> to get you started.</p>
+</div>
+<div class="paragraph">
+<p>== Tips &amp; Tricks</p>
+</div>
+<div class="paragraph">
+<p>=== If your changes are not visible&#8230;</p>
+</div>
+<div class="paragraph">
+<p>completely regenerate the site via:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>rake clean[all] preview</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>=== If serving the site is slow&#8230;</p>
+</div>
+<div class="paragraph">
+<p>On Linux, serving the file may be atrociously slow
+(something to do with WEBRick).</p>
+</div>
+<div class="paragraph">
+<p>Use the following alternative:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go in your <code>~/hibernate.org</code> directory.</p>
+</li>
+<li>
+<p>Run  <code>awestruct --auto -P development</code></p>
+</li>
+<li>
+<p>In parallel, go to the <code>~/hibernate.org/_site</code> directory</p>
+</li>
+<li>
+<p>Run <code>python -m SimpleHTTPServer 4242</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You should be back to millisecond serving :)</p>
+</div>
+<div class="paragraph">
+<p>== License</p>
+</div>
+<div class="paragraph">
+<p>The content of this repository is released under TBD.
+Sample code available on this website is released under TBD.</p>
+</div>
+<div class="paragraph">
+<p>By submitting a "pull request" or otherwise contributing to this repository, you
+agree to license your contribution under the respective licenses mentioned above.</p>
+</div>
+<div class="paragraph">
+<p>== Acknowledgements</p>
+</div>
+<div class="paragraph">
+<p>This website uses <a href="https://github.com/jbossorg/bootstrap-community">JBoss Community Bootstrap</a>.
+This README.adoc was based on
+<a href="https://github.com/hibernate/hibernate.org/blob/hibernate-rebase-of-jbossorg/README.adoc">hibernate.org
+README.adoc</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>

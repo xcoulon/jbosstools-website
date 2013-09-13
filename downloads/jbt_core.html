@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JBoss Tools</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href=".css" media="screen" rel="stylesheet">
+    <!-- IE 6-8 support of HTML 5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
+    <![endif]-->
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/tools/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="http://xcoulon.github.com/jbosstools-website/stylesheets/jbt-styles.css" rel="stylesheet" type="text/css">
+    <link href="http://xcoulon.github.com/jbosstools-website/fonts/font-awesome/font-awesome.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!-- Defines the project banner. Change these URLs to your specific project folder on static.jboss.org -->
+    <style>
+      @media (min-width: 980px) {
+        .banner { background-image: url(http://static.jboss.org/images/tools/tools-banner-1180px.png); height: 110px;  }
+      }
+      @media (max-width: 979px) {
+        .banner { background-image: url(http://static.jboss.org/images/tools/tools-logo.png); background-repeat:no-repeat; height: 60px; }
+      }
+      @media (max-width: 650px) {
+        .banner { width: 200px; margin: 0px auto; }
+      }
+    </style>
+    <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
+    <script src="/javascripts/less-1.4.1.min.js"></script>
+  </head>
+  <body>
+    <!-- begin accesibility skip to top -->
+    <ul class="visuallyhidden" id="top">
+      <li>
+        <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+      </li>
+      <li>
+        <a accesskey="c" href="#page" title="Skip to content">Skip to content</a>
+      </li>
+    </ul>
+    <div class="container" id="content">
+      <div class="dropup">
+        <a class="tabnav-closed" href="https://www.jboss.org" id="tab">Red Hat</a>
+      </div>
+      <div class="banner">
+        <a href="#"></a>
+      </div>
+      <div class="navbar navbar-inverse" id="navbar-fix">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li id="home"><a href="..">Home</a></li>
+                <li id="downloads"><a href="../downloads">Downloads</a></li>
+                <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="../features">Features</a></li>
+                  <li><a href="../whatsnew">What's New</a></li>
+                  <li><a href="../guides/videos.html">Video Tutorials</a></li>
+                  <li><a href="http://docs.jboss.org/tools/4.1.0.Final/">Reference Guides</a></li>
+                </ul></li>
+                <li class="dropdown" id="community">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="../contribute.html">Contribute</a></li>
+                    <li><a href="http://www.jboss.org/community/docs/DOC-10794">Wiki</a></li>
+                    <li><a href="http://community.jboss.org/community/tools?view=discussions">User Forum</a></li>
+                    <li><a href="https://lists.jboss.org/mailman/listinfo/jbosstools-dev">Mailing Lists</a></li>
+                    <li><a href="irc://irc.freenode.org/jbosstools">Chat</a></li>
+                    <li id="blog"><a href="../blog">Blog</a></li>
+                  </ul>
+                </li>
+                <li id="issuetracker"><a href="https://issues.jboss.org/browse/JBIDE">Issues</a></li>
+                <li id="sourcecode"><a href="https://github.com/jbosstools">Source Code</a></li>
+                <li id="build"><a href="http://hudson.jboss.org/hudson/view/JBossTools/view/JBossTools_Trunk/">Build</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Us <b class="caret"></b></a>
+                  <ul class="dropdown-menu projectsocialmedia">
+                    <li><a href="http://twitter.com/jbosstools"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_twitter.png"></a></li>
+                    <li><a href="https://plus.google.com/109915195368578219327"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_googleplus.png"></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- activate the tab by adding the 'active' class -->
+      <script>
+        document.getElementById("downloads").className += " active";
+      </script>
+      <div id="content-wrapper">
+        <div class='breadcrumb'><a class='breadcrumb_anchor ' href='http://xcoulon.github.com/jbosstools-website/index.html'
+                >Home</a> / <a class='breadcrumb_anchor ' href='http://xcoulon.github.com/jbosstools-website/downloads/index.html'
+                >Downloads</a> / <a class='breadcrumb_anchor active' href='http://xcoulon.github.com/jbosstools-website/downloads/jbt_core.html'
+                >JBoss Tools</a></div>
+        <div class="row-fluid">
+          <div class="span12 center">
+            <h2>Download JBoss Tools</h2>
+          </div>
+        </div>
+        <div class="row-fluid tabbable">
+          <div class="span3" id="downloads-menu">
+            <ul class="nav nav-list" id="downloadable_versions_tabs">
+              <li id="jbt_core_410_installation_tab">
+                <a data-toggle="tab" href="#jbt_core_410_installation">
+                  <span>
+                    Version 4.1.0
+                  </span>
+                  <span class="label label-stable_releases">
+                    Stable
+                  </span>
+                  <i class="icon-chevron-right"></i>
+                </a>
+              </li>
+              <li id="jbt_core_42x_nightly_installation_tab">
+                <a data-toggle="tab" href="#jbt_core_42x_nightly_installation">
+                  <span>
+                    Version 4.2
+                  </span>
+                  <span class="label label-nightly_builds">
+                    Nightly
+                  </span>
+                  <i class="icon-chevron-right"></i>
+                </a>
+              </li>
+              <li id="jbt_core_401_installation_tab">
+                <a data-toggle="tab" href="#jbt_core_401_installation">
+                  <span>
+                    Version 4.0.1.Final
+                  </span>
+                  <span class="label label-archives">
+                    Archive
+                  </span>
+                  <i class="icon-chevron-right"></i>
+                </a>
+              </li>
+              <li id="jbt_core_332_installation_tab">
+                <a data-toggle="tab" href="#jbt_core_332_installation">
+                  <span>
+                    Version 3.3.2
+                  </span>
+                  <span class="label label-archives">
+                    Archive
+                  </span>
+                  <i class="icon-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="span9 tab-content download-instructions">
+            <div class="tab-pane" id="jbt_core_410_installation">
+              <p>
+                JBoss Tools 4.1.0 was released on 2013-07-22.
+                Read the
+                <a href="/blog/2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">announcement on our blog</a>
+                to know more about it.
+              </p>
+              <div class="tabbable" id="installation-tabs">
+                <ul class="nav nav-tabs" id="jbt_core_410_tabs">
+                  <li id="jbt_core_410_marketplace_tab">
+                    <a data-toggle="tab" href="#jbt_core_410_marketplace">
+                      Eclipse Marketplace
+                    </a>
+                  </li>
+                  <li id="jbt_core_410_update_site_tab">
+                    <a data-toggle="tab" href="#jbt_core_410_update_site">
+                      Update Site
+                    </a>
+                  </li>
+                  <li id="jbt_core_410_zips_tab">
+                    <a data-toggle="tab" href="#jbt_core_410_zips">
+                      Downloadable zips of the Update site
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="installation-tabs-content">
+                <div class="tab-pane" id="jbt_core_410_marketplace">
+                  <p>
+                    Drag and drop the
+                    <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=876523" title="Install">
+                      <img alt="Drag and drop this button into a running  workspace to install JBoss Tools" height="25" src="http://xcoulon.github.com/jbosstools-website/images/tools/installbutton.png" width="63">
+                    </a>
+                    icon on your active
+                    <strong>Eclipse Kepler 4.3</strong>
+                    workspace, or alternatively, search for &quot;<strong>JBoss Tools (Kepler)</strong>&quot; in Eclipse via:
+                    <blockquote>
+                      Help > Eclipse Marketplace...
+                    </blockquote>
+                  </p>
+                  <p>
+                    You can also view the installation page on the&nbsp<a href="http://marketplace.eclipse.org/node/876523" title="Eclipse Marketplace">Eclipse Marketplace</a>.
+                  </p>
+                </div>
+                <div class="tab-pane" id="jbt_core_410_update_site">
+                  <p>Add the following URL to your <strong>Eclipse Kepler 4.3</strong> workspace: <a href="http://download.jboss.org/jbosstools/updates/stable/kepler/">http://download.jboss.org/jbosstools/updates/stable/kepler/</a>
+                  via</p>
+                  
+                  <blockquote><p>Help > Install New Software...</p></blockquote>
+                  
+                  <p>then select the individual features that you want to install.</p>
+                </div>
+                <div class="tab-pane" id="jbt_core_410_zips">
+                  <p>You can download Update Zips (Archived p2 Repos) for offline installation of <strong>JBoss Tools</strong>, but <strong>DO NOT UNPACK THEM</strong> into your Eclipse root or dropins folder!
+                  Next, install into Eclipse using</p>
+                  
+                  <blockquote><p>Help > Install New Software... > Add... > Archive...</p></blockquote>
+                  
+                  <p>and point to the archive you downloaded from the tables below, depending on the features of JBoss Tools you want to use.</p>
+                  <table class="center">
+                    <tr>
+                      <th>Name</th>
+                      <th>Size</th>
+                      <th>Links</th>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all JBoss Tools Core</td>
+                      <td class="right">409MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sources zip of all JBoss Tools Core</td>
+                      <td class="right">135MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Sources-4.1.0.Final_2013-07-19_19-47-52-B380.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/jbosstools-Sources-4.1.0.Final_2013-07-19_19-47-52-B380.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all Hibernate Tools</td>
+                      <td class="right">78MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/hibernatetools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.1.x/hibernatetools-Update-4.1.0.Final_2013-07-19_19-47-52-B380.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="jbt_core_42x_nightly_installation">
+              <div class="alert">
+                <strong>Warning!</strong>
+                Installing
+                <strong>nightly builds</strong>
+                might result in black holes being created !
+              </div>
+              <div class="tabbable" id="installation-tabs">
+                <ul class="nav nav-tabs" id="jbt_core_42x_nightly_tabs">
+                  <li id="jbt_core_42x_nightly_marketplace_tab">
+                    <a data-toggle="tab" href="#jbt_core_42x_nightly_marketplace">
+                      Eclipse Marketplace
+                    </a>
+                  </li>
+                  <li id="jbt_core_42x_nightly_update_site_tab">
+                    <a data-toggle="tab" href="#jbt_core_42x_nightly_update_site">
+                      Update Site
+                    </a>
+                  </li>
+                  <li id="jbt_core_42x_nightly_zips_tab">
+                    <a data-toggle="tab" href="#jbt_core_42x_nightly_zips">
+                      Downloadable zips of the Update site
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="installation-tabs-content">
+                <div class="tab-pane" id="jbt_core_42x_nightly_update_site">
+                  <p>Add the following URL to your <strong>Eclipse Kepler 4.3</strong> workspace: <a href="http://download.jboss.org/jbosstools/builds/nightly/core/trunk/latestBuild.html">http://download.jboss.org/jbosstools/builds/nightly/core/trunk/latestBuild.html</a>
+                  via</p>
+                  
+                  <blockquote><p>Help > Install New Software...</p></blockquote>
+                  
+                  <p>then select the individual features that you want to install.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="jbt_core_401_installation">
+              <div class="tabbable" id="installation-tabs">
+                <ul class="nav nav-tabs" id="jbt_core_401_tabs">
+                  <li id="jbt_core_401_marketplace_tab">
+                    <a data-toggle="tab" href="#jbt_core_401_marketplace">
+                      Eclipse Marketplace
+                    </a>
+                  </li>
+                  <li id="jbt_core_401_update_site_tab">
+                    <a data-toggle="tab" href="#jbt_core_401_update_site">
+                      Update Site
+                    </a>
+                  </li>
+                  <li id="jbt_core_401_zips_tab">
+                    <a data-toggle="tab" href="#jbt_core_401_zips">
+                      Downloadable zips of the Update site
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="installation-tabs-content">
+                <div class="tab-pane" id="jbt_core_401_marketplace">
+                  <p>
+                    Drag and drop the
+                    <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=420896" title="Install">
+                      <img alt="Drag and drop this button into a running  workspace to install JBoss Tools" height="25" src="http://xcoulon.github.com/jbosstools-website/images/tools/installbutton.png" width="63">
+                    </a>
+                    icon on your active
+                    <strong>Eclipse Juno 4.2.2</strong>
+                    workspace, or alternatively, search for &quot;<strong>JBoss Tools (Juno)</strong>&quot; in Eclipse via:
+                    <blockquote>
+                      Help > Eclipse Marketplace...
+                    </blockquote>
+                  </p>
+                  <p>
+                    You can also view the installation page on the&nbsp<a href="http://marketplace.eclipse.org/node/420896" title="Eclipse Marketplace">Eclipse Marketplace</a>.
+                  </p>
+                </div>
+                <div class="tab-pane" id="jbt_core_401_update_site">
+                  <p>Add the following URL to your <strong>Eclipse Juno 4.2.2</strong> workspace: <a href="http://download.jboss.org/jbosstools/updates/stable/juno/">http://download.jboss.org/jbosstools/updates/stable/juno/</a>
+                  via</p>
+                  
+                  <blockquote><p>Help > Install New Software...</p></blockquote>
+                  
+                  <p>then select the individual features that you want to install.</p>
+                </div>
+                <div class="tab-pane" id="jbt_core_401_zips">
+                  <p>You can download Update Zips (Archived p2 Repos) for offline installation of <strong>JBoss Tools</strong>, but <strong>DO NOT UNPACK THEM</strong> into your Eclipse root or dropins folder!
+                  Next, install into Eclipse using</p>
+                  
+                  <blockquote><p>Help > Install New Software... > Add... > Archive...</p></blockquote>
+                  
+                  <p>and point to the archive you downloaded from the tables below, depending on the features of JBoss Tools you want to use.</p>
+                  <table class="center">
+                    <tr>
+                      <th>Name</th>
+                      <th>Size</th>
+                      <th>Links</th>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all JBoss Tools Core</td>
+                      <td class="right">194MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.aggregate-Update-2013-03-27_16-17-05-B340.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.aggregate-Update-2013-03-27_16-17-05-B340.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sources zip of all JBoss Tools Core</td>
+                      <td class="right">100MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.aggregate-Sources-2013-03-27_16-17-05-B340.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.aggregate-Sources-2013-03-27_16-17-05-B340.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all Hibernate Tools</td>
+                      <td class="right">43MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.component--hibernatetools-Update-2013-03-27_16-17-05-B340.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/jbosstools-4.0.1.Final.component--hibernatetools-Update-2013-03-27_16-17-05-B340.zip">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Release Notes</td>
+                      <td class="right">{}</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools4.0.x/zz_Release_Notes_4.0.1.Final.readme.html">html</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="jbt_core_332_installation">
+              <div class="tabbable" id="installation-tabs">
+                <ul class="nav nav-tabs" id="jbt_core_332_tabs">
+                  <li id="jbt_core_332_marketplace_tab">
+                    <a data-toggle="tab" href="#jbt_core_332_marketplace">
+                      Eclipse Marketplace
+                    </a>
+                  </li>
+                  <li id="jbt_core_332_update_site_tab">
+                    <a data-toggle="tab" href="#jbt_core_332_update_site">
+                      Update Site
+                    </a>
+                  </li>
+                  <li id="jbt_core_332_zips_tab">
+                    <a data-toggle="tab" href="#jbt_core_332_zips">
+                      Downloadable zips of the Update site
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="installation-tabs-content">
+                <div class="tab-pane" id="jbt_core_332_marketplace">
+                  <p>
+                    Drag and drop the
+                    <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=121986" title="Install">
+                      <img alt="Drag and drop this button into a running  workspace to install JBoss Tools" height="25" src="http://xcoulon.github.com/jbosstools-website/images/tools/installbutton.png" width="63">
+                    </a>
+                    icon on your active
+                    <strong>Eclipse Indigo 3.7.2</strong>
+                    workspace, or alternatively, search for &quot;<strong>JBoss Tools (Indigo)</strong>&quot; in Eclipse via:
+                    <blockquote>
+                      Help > Eclipse Marketplace...
+                    </blockquote>
+                  </p>
+                  <p>
+                    You can also view the installation page on the&nbsp<a href="http://marketplace.eclipse.org/node/121986" title="Eclipse Marketplace">Eclipse Marketplace</a>.
+                  </p>
+                </div>
+                <div class="tab-pane" id="jbt_core_332_update_site">
+                  <p>Add the following URL to your <strong>Eclipse Indigo 3.7.2</strong> workspace: <a href="http://download.jboss.org/jbosstools/updates/stable/indigo/">http://download.jboss.org/jbosstools/updates/stable/indigo/</a>
+                  via</p>
+                  
+                  <blockquote><p>Help > Install New Software...</p></blockquote>
+                  
+                  <p>then select the individual features that you want to install.</p>
+                </div>
+                <div class="tab-pane" id="jbt_core_332_zips">
+                  <p>You can download Update Zips (Archived p2 Repos) for offline installation of <strong>JBoss Tools</strong>, but <strong>DO NOT UNPACK THEM</strong> into your Eclipse root or dropins folder!
+                  Next, install into Eclipse using</p>
+                  
+                  <blockquote><p>Help > Install New Software... > Add... > Archive...</p></blockquote>
+                  
+                  <p>and point to the archive you downloaded from the tables below, depending on the features of JBoss Tools you want to use.</p>
+                  <table class="center">
+                    <tr>
+                      <th>Name</th>
+                      <th>Size</th>
+                      <th>Links</th>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all JBoss Tools Core</td>
+                      <td class="right">237MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.aggregate-Update-2013-01-18_18-03-25-H229.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.aggregate-Update-2013-01-18_18-03-25-H229.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Sources zip of all JBoss Tools Core</td>
+                      <td class="right">107MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.aggregate-Sources-2013-01-18_18-03-25-H229.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.aggregate-Sources-2013-01-18_18-03-25-H229.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Update site (including sources) bundle of all Hibernate Tools</td>
+                      <td class="right">70MB</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.component--hibernatetools-Update-2013-01-18_18-03-25-H229.zip">zip</a>
+                        (<a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/jbosstools-3.3.2.Final.component--hibernatetools-Update-2013-01-18_18-03-25-H229.zip.MD5">md5</a>)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Release Notes</td>
+                      <td class="right">{}</td>
+                      <td>
+                        <a href="http://sourceforge.net/projects/jboss/files/JBossTools/JBossTools3.3.x/zz_Release_Notes_3.3.2.Final.readme.html">html</a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(document).ready(function () {
+            $('#downloadable_versions_tabs a:first').tab('show');
+          $('#jbt_core_410_tabs li:not(.disabled):first>a').tab('show');
+          $('#jbt_core_42x_nightly_marketplace_tab').addClass('disabled');
+          $('#jbt_core_42x_nightly_marketplace_tab>a').removeAttr('data-toggle');
+          $('#jbt_core_42x_nightly_zips_tab').addClass('disabled');
+          $('#jbt_core_42x_nightly_zips_tab>a').removeAttr('data-toggle');
+          $('#jbt_core_42x_nightly_tabs li:not(.disabled):first>a').tab('show');
+          $('#jbt_core_401_tabs li:not(.disabled):first>a').tab('show');
+          $('#jbt_core_332_tabs li:not(.disabled):first>a').tab('show');
+          
+            $('a[data-toggle=tab]').click(function (e) {
+              e.preventDefault();
+              $(this).tab('show');
+            });
+          });
+        </script>
+      </div>
+    </div>
+    <footer class="container">
+      <div class="row-fluid">
+        <div class="span2 offset1">
+          <h4>Navigate</h4>
+          <ul>
+            <li>
+              <a href="" title="Overview">Overview</a>
+            </li>
+            <li>
+              <a href="../download" title="Download">Download</a>
+            </li>
+            <li>
+              <a href="../usage" title="Usage">Usage</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="../blog" title="Blog">Blog</a>
+            </li>
+            <li>
+              <a href="http://twitter.com/jbosstools" title="Twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/109915195368578219327" title="Google+">Google+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Contribute</h4>
+          <ul>
+            <li>
+              <a href="https://issues.jboss.org/browse/JBIDE" title="Submit a bug">Submit a bug</a>
+            </li>
+            <li>
+              <a href="https://github.com/jbosstools" title="Write code">Write Code</a>
+            </li>
+            <li>
+              <a href="#" title="Ask questions on the forum">Ask questions on the forum</a>
+            </li>
+            <li>
+              <a href="#" title="Talk on IRC">Talk with us on IRC</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3 offset1">
+          <h4>Licenses</h4>
+          <p>All plugins are available under the Eclipse Public License (EPL).</p>
+          <p>They may also contain some libraries licensed under certain open source licenses such as EPL, LGPL, and/or certain other open source licenses.</p>
+          <p></p>
+          <div class="jbossbadge">
+            <a href="http://www.jboss.org/">
+              <img src="http://static.jboss.org/theme/images/common/jbossbadge.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container" id="companyfooter">
+      <div class="redhatlogo">
+        <div id="logospacer"></div>
+        <a href="http://www.redhat.com/"><img src="http://static.jboss.org/theme/images/common/redhat_logo.png"></a>
+      </div>
+    </div>
+    <span class="backToTop">
+      <a href="#top">back to top</a>
+    </span>
+    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community.js"></script>
+  </body>
+</html>
