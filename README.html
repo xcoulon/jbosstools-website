@@ -162,24 +162,17 @@ Please use Listen::Adapter#start for a non-blocking listener and Listen::Listene
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_guard_and_livereload">guard and livereload</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-== guard and livereload</p>
-</div>
-<div class="paragraph">
-<p>You can install guard and its livereload extension to get instant refresh in your browser when pages are regenerated</p>
-</div>
-<div class="paragraph">
-<p>First, open another terminal window and execute the following commands to install the gems:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>gem 'guard'
-gem 'guard-livereload'</code></pre>
-</div>
+<p>You can install the livereload extension to get instant refresh in your browser when pages are regenerated
+by running guard.</p>
 </div>
 <div class="paragraph">
-<p>Then, start guard:</p>
+<p>The dependencies should already be installed by the Gemfile thus you just need to start guard:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -187,7 +180,7 @@ gem 'guard-livereload'</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Finally, install the LiveReload extension in your browser and click on the button next to the Location to activate the extension.</p>
+<p>Install the LiveReload extension in your browser and click on the button next to the Location to activate the extension.</p>
 </div>
 <div class="paragraph">
 <p>Chrome users can install the v.2.0.9 extension from the <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/details">Chrome Marketplace</a>.</p>
@@ -195,21 +188,21 @@ gem 'guard-livereload'</code></pre>
 <div class="paragraph">
 <p>Firefox users should use v. 2.0.9 or newer of the LiveReload extension available from <a href="https://github.com/downloads/siasia/livereload-extensions/LiveReload-2.0.9.xpi">here</a>. If you hit an issue where the browser disconnects just after it has connected, which means the server cannot push refresh commands to it, you are using an old plugin and should update it.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; 80ef7d3181afb4a866c349cbc9ddbf381be883c0
-== Next steps</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps">Next steps</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Using you local site, you can have a look at our <a href="/survival-guide/">survival guide to editing this website</a> to get you started.</p>
 </div>
-<div class="paragraph">
-<p>== Tips &amp; Tricks</p>
 </div>
-<div class="paragraph">
-<p>=== If your changes are not visible&#8230;</p>
 </div>
+<div class="sect1">
+<h2 id="_tips_tricks">Tips &amp; Tricks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_if_your_changes_are_not_visible">If your changes are not visible&#8230;</h3>
 <div class="paragraph">
 <p>completely regenerate the site via:</p>
 </div>
@@ -218,9 +211,9 @@ gem 'guard-livereload'</code></pre>
 <pre class="highlight"><code>rake clean[all] preview</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>=== If serving the site is slow&#8230;</p>
 </div>
+<div class="sect2">
+<h3 id="_if_serving_the_site_is_slow">If serving the site is slow&#8230;</h3>
 <div class="paragraph">
 <p>On Linux, serving the file may be atrociously slow
 (something to do with WEBRick).</p>
@@ -231,13 +224,13 @@ gem 'guard-livereload'</code></pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Go in your <code>~/hibernate.org</code> directory.</p>
+<p>Go in your <code>~/jbosstools-website</code> directory.</p>
 </li>
 <li>
 <p>Run  <code>awestruct --auto -P development</code></p>
 </li>
 <li>
-<p>In parallel, go to the <code>~/hibernate.org/_site</code> directory</p>
+<p>In parallel, go to the <code>~/jbosstools-website/_site</code> directory</p>
 </li>
 <li>
 <p>Run <code>python -m SimpleHTTPServer 4242</code></p>
@@ -247,9 +240,12 @@ gem 'guard-livereload'</code></pre>
 <div class="paragraph">
 <p>You should be back to millisecond serving :)</p>
 </div>
-<div class="paragraph">
-<p>== License</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_license">License</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The content of this repository is released under TBD.
 Sample code available on this website is released under TBD.</p>
@@ -258,16 +254,16 @@ Sample code available on this website is released under TBD.</p>
 <p>By submitting a "pull request" or otherwise contributing to this repository, you
 agree to license your contribution under the respective licenses mentioned above.</p>
 </div>
-<div class="paragraph">
-<p>== Acknowledgements</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_acknowledgements">Acknowledgements</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>This website uses <a href="https://github.com/jbossorg/bootstrap-community">JBoss Community Bootstrap</a>.
 This README.adoc was based on
 <a href="https://github.com/hibernate/hibernate.org/blob/hibernate-rebase-of-jbossorg/README.adoc">hibernate.org
 README.adoc</a></p>
-</div>
-</div>
 </div>
 </div>
 </div>
