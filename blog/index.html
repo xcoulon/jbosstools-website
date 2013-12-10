@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
     <meta content="" name="author">
-    <link href="http://static.jboss.org/theme/css/bootstrap-community/2.3.1.1/bootstrap-community.css" media="screen" rel="stylesheet">
+    <link href="http://static.jboss.org/theme/css/bootstrap-community/2.3.1.3/bootstrap-community.css" media="screen" rel="stylesheet">
     <!-- IE 6-8 support of HTML 5 elements -->
     <!--[if lt IE 9]>
       <script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
@@ -39,7 +39,7 @@
     <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
   </head>
   <body>
-    <!-- begin accesibility skip to top -->
+    <!-- begin accessibility skip to top -->
     <ul class="visuallyhidden" id="top">
       <li>
         <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
@@ -51,6 +51,9 @@
     <div class="container" id="content">
       <div class="dropup">
         <a class="tabnav-closed" href="https://www.jboss.org" id="tab">Red Hat</a>
+        <script>
+          window.addEventListener('load', function() { renderTabzilla("JBoss Tools","tools") }, false);
+        </script>
       </div>
       <div class="banner">
         <a href="#"></a>
@@ -65,7 +68,7 @@
             </a>
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li id="home"><a href="..">Home</a></li>
+                <li id="home"><a href="http://xcoulon.github.com/jbosstools-website/">Home</a></li>
                 <li id="downloads"><a href="http://xcoulon.github.com/jbosstools-website/downloads/">Downloads</a></li>
                 <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -121,6 +124,81 @@
                 <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
                 <div class="title">
                   <h3>
+                    <a href="2013/11/21/wro.html">Web Resource Optimization with m2e-wro4j</a>
+                  </h3>
+                  <div class="author">
+                    <!-- there is only one author per post but the author splitter adds an array here -->
+                    posted by
+                    <strong>Fred Bricon</strong>
+                    on
+                    <strong>Nov 21, 2013.</strong>
+                    <a class="label label-info" href="tags/jbosstools">jbosstools</a>
+                    <a class="label label-info" href="tags/jbds">jbds</a>
+                    <a class="label label-info" href="tags/mobile">mobile</a>
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div id="preamble">
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_installation">Installation</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah blah</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <i class="icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                <div class="paragraph">
+                <p>Ssshhh</p>
+                </div>
+                <div class="paragraph">
+                <p><a href="http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/">http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/</a></p>
+                </div>
+                </td>
+                </tr>
+                </table>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_performance_sucks">Performance sucks</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>I know</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="./open-with-livereload.png" alt="open with livereload">
+                </div>
+                </div>
+                <div class="paragraph">
+                <p>Have fun!</p>
+                </div>
+                <div class="paragraph">
+                <p>Fred Bricon<br>
+                <a href="https://twitter.com/fbricon">https://twitter.com/fbricon</a></p>
+                </div>
+                </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="post">
+              <div class="title-wrapper">
+                <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
+                <div class="title">
+                  <h3>
                     <a href="2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
                   </h3>
                   <div class="author">
@@ -168,7 +246,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -227,7 +305,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/open-with-livereload.png" alt="open with livereload">
+                <img src="./open-with-livereload.png" alt="open with livereload">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -243,7 +321,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/LiveReload_open_in_web_browser_via_qrcode-dialog.png" alt="LiveReload open in web browser via qrcode dialog">
+                <img src="./LiveReload_open_in_web_browser_via_qrcode-dialog.png" alt="LiveReload open in web browser via qrcode dialog">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -253,7 +331,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -280,12 +358,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/lf.png" alt="lf">
+                <img src="./lf.png" alt="lf">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/set.png" alt="set">
+                <img src="./set.png" alt="set">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -320,14 +398,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/browsersim-firebug.png" alt="browsersim firebug">
+                <img src="./browsersim-firebug.png" alt="browsersim firebug">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -353,12 +431,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/missing-xulrunner.png" alt="missing xulrunner">
+                <img src="./missing-xulrunner.png" alt="missing xulrunner">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/vpe-win64.png" alt="vpe win64">
+                <img src="./vpe-win64.png" alt="vpe win64">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -377,14 +455,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/runConfigs.png" alt="runConfigs">
+                <img src="./runConfigs.png" alt="runConfigs">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -404,14 +482,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/CordovaSim-demo.png" alt="CordovaSim demo">
+                <img src="./CordovaSim-demo.png" alt="CordovaSim demo">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -450,7 +528,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/new-forge-based-wizards.png" alt="new forge based wizards">
+                <img src="./new-forge-based-wizards.png" alt="new forge based wizards">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -488,12 +566,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/arquillian-junit-1.png" alt="arquillian junit 1">
+                <img src="./arquillian-junit-1.png" alt="arquillian junit 1">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/arquillian-test-3.png" alt="arquillian test 3">
+                <img src="./arquillian-test-3.png" alt="arquillian test 3">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -503,7 +581,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -528,7 +606,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/publishing-to-openshift.png" alt="publishing to openshift">
+                <img src="./publishing-to-openshift.png" alt="publishing to openshift">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -545,7 +623,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/restart-application.png" alt="restart application">
+                <img src="./restart-application.png" alt="restart application">
                 </div>
                 </div>
                 </div>
@@ -556,7 +634,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/advanced-source-code.png" alt="advanced source code">
+                <img src="./advanced-source-code.png" alt="advanced source code">
                 </div>
                 </div>
                 </div>
@@ -567,7 +645,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/configure-markers-wizard.png" alt="configure markers wizard">
+                <img src="./configure-markers-wizard.png" alt="configure markers wizard">
                 </div>
                 </div>
                 </div>
@@ -587,7 +665,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/jboss_central.png" alt="jboss central">
+                <img src="./jboss_central.png" alt="jboss central">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -615,7 +693,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/new-server-adapters.png" alt="new server adapters">
+                <img src="./new-server-adapters.png" alt="new server adapters">
                 </div>
                 </div>
                 </div>
@@ -671,7 +749,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/automatic-source-lookup.png" alt="automatic source lookup">
+                <img src="./automatic-source-lookup.png" alt="automatic source lookup">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -685,7 +763,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/edit-maven-repositories.png" alt="edit maven repositories">
+                <img src="./edit-maven-repositories.png" alt="edit maven repositories">
                 </div>
                 </div>
                 </div>
@@ -723,62 +801,6 @@
               </div>
               <hr>
             </div>
-            <div class="post">
-              <div class="title-wrapper">
-                <img class="img-polaroid" src="https://community.jboss.org/people/maxandersen/avatar/64.png">
-                <div class="title">
-                  <h3>
-                    <a href="2012/09/17/return-of-jboss-tools.html">The Return of JBoss Tools</a>
-                  </h3>
-                  <div class="author">
-                    <!-- there is only one author per post but the author splitter adds an array here -->
-                    posted by
-                    <strong>Max Rydahl Andersen</strong>
-                    on
-                    <strong>Sep 17, 2012.</strong>
-                    <a class="label label-info" href="tags/jbosstools">jbosstools</a>
-                    <a class="label label-info" href="tags/jbosscentral">jbosscentral</a>
-                    <a class="label label-info" href="tags/m2e-wtp">m2e-wtp</a>
-                  </div>
-                </div>
-              </div>
-              <div class="body">
-                <p>Summer is over and it&#8217;s time to start getting the JBoss Tools release train moving again.</p>
-                <h1>JBoss Tools 4.0.0 Alpha 1</h1>
-                <h2>A new version?</h2>
-                <p>This year we are starting on JBoss Tools 4 (as opposed to the past seveal years of JBoss Tools 3). Why the new version? There are several reasons why it was time. Our Eclipse.org project-based target platform also changed from 3.x to 4.&#215;. The projects is growing bigger and bigger so it&#8217;s time to clean up some of the APIs and move from our big SVN semi-modularized monolithic layout to smaller, more independent (but still aligned) Git projects. The groundworks for this does require splitting with things in the past, at least on a technical level &#8211; but we do plan on making this transition as transparent as possible on the user level.</p>
-                <p>We are also starting to use Alpha (A) instead of Milestone (M) in our versioning &#8211; same meaning at the user level insofar as early development milestones are the (semi-)bleeding edge &#8211; but at the technical level it allow us to follow and use OSGi/p2-friendly version schemes that prevents and detects incompatible changes between branches better than in the past.</p>
-                <p>But enough about a single character &#8211; on to the user visible changes/improvements!</p>
-                <h2>Installation</h2>
-                <p>Recommended path to install is to have a clean Eclipse Juno install and use our updatesite to install from.<br />
-                This release you need Eclipse 4.2 but we recommend using the <a href="http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/indigosr2">Eclipse 4.2 JEE Bundle</a> since then you get most of the dependencies preinstalled.<br />
-                Once you have installed Eclipse use our update site directly, or you can drag this icon into your running Eclipse to install from the Eclipse Marketplace: <a href="http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=420896"><img src="http://marketplace.eclipse.org/misc/installbutton.png" alt="" /></a></p>
-                <p>The update site URL to use from &#8220;Help &gt; Install New Software&#8230;&#8221; is:</p>
-                <blockquote>
-                <p><a href="http://download.jboss.org/jbosstools/updates/development/juno/">http://download.jboss.org/jbosstools/updates/development/juno/</a></p>
-                </blockquote>
-                <p><strong>Note:</strong> SOA Tooling, including BPEL, Drools, ESB, jBPM3, jBPM5, Savara, SwitchYard, pi4soa, ModeShape &amp; Teiid Designer are not included in the JBoss Tools Core release at this time &#8211; they will be available separately.</p>
-                <p><strong>Note m2e-wtp users:</strong> In case you already have m2e-wtp installed, then add the updatesite first and then run &#8220;Help &gt; Find Updates&#8221; before trying to run Help &gt; Install new. This way you will automatically update from the old org.maven.ide.eclipse.wtp.feature 0.15 to the new namespace &amp; version, org.eclipse.m2e.wtp.feature 0.16.<br />
-                Eclipse Juno &amp; m2e-wtp<br />
-                JBoss Tools 3.x could and can run on Juno but it did have its problems, especially in context of Eclipse Dali/Hibernate integration since the Dali API changed radically from Indigo to Juno. In JBoss Tools 4 Alpha1 all of this should now be a thing of the past. Let us know if you find any discrepencencies in this area.</p>
-                <p>Since m2eclipse-wtp is moving to Eclipse.org as m2e-wtp. As such the existing dependency on m2eclipse-wtp has been changed to m2e-wtp 0.16.0. Since the two plugins overlap and can not coexist you have to either uninstall the old m2e-wtp before installing the new or perform a &#8220;Help &gt; Check for updates&#8230;&#8221; which will be able to do the uninstall old/install new automatically. We wish it could be easier but a bug in p2 install UI prevents this.</p>
-                <h2>Bugfixes</h2>
-                <p>278 issues were fixed in this Alpha1, mainly targeted on issues reported and found when working on Juno and of course a good bunch of bugfixes based on the feedback from previous releases &#8211; please keep the feedback coming, its immensly useful.</p>
-                <h2>Migrate jar-classpath to maven-classpath</h2>
-                <p>The biggest in Maven tools are that we now use the eclipse.org m2e-wtp but there are also work on making it easy to convert an eclipse project into a Maven project by helping identifiying the proper Maven Group-Artifact-Version id&#8217;s of the various jars on your classpath. Maven Tools What&#8217;s New has more about this.</p>
-                <p><img src="./images/dependency_conversion.png" alt="" /></p>
-                <h2>&#8220;As-you-type&#8221; validation</h2>
-                <p>Our CDI and JSF/xhtml validation previously only ran when you saved your file(s) and triggered an incremental build to validate the changes across the project. In JBoss Tools 4<br />
-                we validate the file being edited as you type allowing you to get feedback faster.</p>
-                <p>Alexey Kazakov recorded a video highlighting how it works:</p>
-                <div class="left" id="container-reduced"><link href="/stylesheets/jbt-movies.css" media="screen, projection" rel="stylesheet" type="text/css"><div class="playerbox"><div id="player"><iframe width="425" height="350" class="vimeo" src="http://player.vimeo.com/video/47965113?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen"></iframe></div></div></div><h2>Next steps&#8230;</h2>
-                <p>JBoss Tools 4 is planned to have a very short release cycle compared to previous years &#8211; we want to GA in 2012, running on a well-performing Eclipse 4/Juno release inside JBoss Developer Studio 6.</p>
-                <p>Our Jira contains the roadmap with tentative dates and in the upcoming weeks we&#8217;ll blog more about planned/upcoming features for JBoss Tools 4 and onward.</p>
-                <p>For now, take Alpha1 a spin and let us know what you think!</p>
-                <p>Have fun,</p>
-              </div>
-              <hr>
-            </div>
           </div>
           <!--
             <div class="span3">
@@ -786,16 +808,13 @@
                 <h4>Recent Posts</h4>
                 <ul>
                   <li>
+                    <a href="2013/11/21/wro.html">Web Resource Optimization with m2e-wro4j</a>
+                  </li>
+                  <li>
                     <a href="2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
                   </li>
                   <li>
-                    <a href="2012/09/17/return-of-jboss-tools.html">The Return of JBoss Tools</a>
-                  </li>
-                  <li>
                     <a href="2012/08/24/show-domain-info-openshift-java-client-in-a-nutshell.html">show-domain-info: openshift-java-client in a nutshell</a>
-                  </li>
-                  <li>
-                    <a href="2012/08/22/summer-time-with-new-release-soa-tools-and-a-bit-of-juno-and-fedora-news.html">Summer time with new release, SOA tools and a bit of Juno and Fedora news</a>
                   </li>
                 </ul>
               </div>
@@ -831,7 +850,7 @@
           <h4>Navigate</h4>
           <ul>
             <li>
-              <a href="" title="Overview">Overview</a>
+              <a href=".." title="Overview">Overview</a>
             </li>
             <li>
               <a href="../download" title="Download">Download</a>
@@ -894,6 +913,6 @@
     <span class="backToTop">
       <a href="#top">back to top</a>
     </span>
-    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community.js"></script>
+    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.3/bootstrap-community.js"></script>
   </body>
 </html>

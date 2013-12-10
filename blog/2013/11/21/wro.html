@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JBoss Tools</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="http://static.jboss.org/theme/css/bootstrap-community/2.3.1.3/bootstrap-community.css" media="screen" rel="stylesheet">
+    <!-- IE 6-8 support of HTML 5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
+    <![endif]-->
+    <!-- Defines the project favicon. Change these URLs to your specific project folder on static.jboss.org. -->
+    <link href="http://static.jboss.org/images/tools/favicon.ico" rel="shortcut icon">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+    <link href="http://static.jboss.org/images/tools/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed">
+    <link href="http://xcoulon.github.com/jbosstools-website/stylesheets/jbt-styles.css" rel="stylesheet" type="text/css">
+    <link href="http://xcoulon.github.com/jbosstools-website/fonts/font-awesome/font-awesome.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <!-- Defines the project banner. Change these URLs to your specific project folder on static.jboss.org -->
+    <!--
+      <style>
+        @media (min-width: 980px) {
+          .banner { background-image: url(http://static.jboss.org/images/tools/tools-banner-1180px.png); height: 110px;  }
+        }
+        @media (max-width: 979px) {
+          .banner { background-image: url(http://static.jboss.org/images/tools/tools-logo.png); background-repeat:no-repeat; height: 60px; }
+        }
+        @media (max-width: 650px) {
+          .banner { width: 200px; margin: 0px auto; }
+        }
+      </style>
+    -->
+    <style>
+      .banner { background-image: url(http://static.jboss.org/images/tools/tools-banner-1180px.png); height: 110px;  }
+    </style>
+    <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
+  </head>
+  <body>
+    <!-- begin accessibility skip to top -->
+    <ul class="visuallyhidden" id="top">
+      <li>
+        <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
+      </li>
+      <li>
+        <a accesskey="c" href="#page" title="Skip to content">Skip to content</a>
+      </li>
+    </ul>
+    <div class="container" id="content">
+      <div class="dropup">
+        <a class="tabnav-closed" href="https://www.jboss.org" id="tab">Red Hat</a>
+        <script>
+          window.addEventListener('load', function() { renderTabzilla("JBoss Tools","tools") }, false);
+        </script>
+      </div>
+      <div class="banner">
+        <a href="#"></a>
+      </div>
+      <div class="navbar navbar-inverse" id="navbar-fix">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li id="home"><a href="http://xcoulon.github.com/jbosstools-website/">Home</a></li>
+                <li id="downloads"><a href="http://xcoulon.github.com/jbosstools-website/downloads/">Downloads</a></li>
+                <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/features">Features</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/whatsnew">What's New</a></li>
+                  <li><a href="http://xcoulon.github.com/jbosstools-website/guides/videos.html">Video Tutorials</a></li>
+                  <li><a href="http://docs.jboss.org/tools/4.1.0.Final/">Reference Guides</a></li>
+                </ul></li>
+                <li class="dropdown" id="community">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Community <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://xcoulon.github.com/jbosstools-website/contribute.html">Contribute</a></li>
+                    <li><a href="http://www.jboss.org/community/docs/DOC-10794">Wiki</a></li>
+                    <li><a href="http://community.jboss.org/community/tools?view=discussions">User Forum</a></li>
+                    <li><a href="https://lists.jboss.org/mailman/listinfo/jbosstools-dev">Mailing Lists</a></li>
+                    <li><a href="irc://irc.freenode.org/jbosstools">Chat</a></li>
+                    <li id="blog"><a href="../blog">Blog</a></li>
+                  </ul>
+                </li>
+                <li id="issuetracker"><a href="https://issues.jboss.org/browse/JBIDE">Issues</a></li>
+                <li id="sourcecode"><a href="https://github.com/jbosstools">Source Code</a></li>
+                <li id="build"><a href="http://hudson.jboss.org/hudson/view/JBossTools/view/JBossTools_Trunk/">Build</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Follow Us <b class="caret"></b></a>
+                  <ul class="dropdown-menu projectsocialmedia">
+                    <li><a href="http://twitter.com/jbosstools"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_twitter.png"></a></li>
+                    <li><a href="https://plus.google.com/109915195368578219327"><img src="http://static.jboss.org/theme/images/common/socialmedia_icon40_googleplus.png"></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- activate the tab by adding the 'active' class -->
+      <script>
+        document.getElementById("community").className += " active";
+      </script>
+      <div id="content-wrapper">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class='breadcrumb'><a class='breadcrumb_anchor ' href='http://xcoulon.github.com/jbosstools-website/index.html'
+                    >Home</a> / <a class='breadcrumb_anchor ' href='http://xcoulon.github.com/jbosstools-website/blog/index.html'
+                    >Blog</a> / <a class='breadcrumb_anchor active' href='http://xcoulon.github.com/jbosstools-website/blog/2013/11/21/wro.html'
+                    >Web Resource Optimization with m2e-wro4j</a></div>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span12" id="core-page">
+            <div class="post">
+              <div class="title-wrapper">
+                <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
+                <div class="title border">
+                  <h3>
+                    <a href="wro.html">Web Resource Optimization with m2e-wro4j</a>
+                  </h3>
+                  <div class="author">
+                    <!-- there is only one author per post but the author splitter adds an array here -->
+                    posted by
+                    <strong>Fred Bricon</strong>
+                    on
+                    <strong>Nov 21, 2013.</strong>
+                    <a class="label label-info" href="../../../tags/jbosstools">jbosstools</a>
+                    <a class="label label-info" href="../../../tags/jbds">jbds</a>
+                    <a class="label label-info" href="../../../tags/mobile">mobile</a>
+                    <p class="comments">
+                      <i class="icon-comments"></i>
+                       <a href="http://xcoulon.github.com/jbosstools-website/blog/2013/11/21/wro.html#disqus_thread">Comments</a>
+                      
+                                  <script type="text/javascript">
+                                  var disqus_shortname = 'jbosstools-preview';
+                                  (function () {
+                                    var s = document.createElement('script'); s.async = true;
+                                    s.src = "http://disqus.com/forums/jbosstools-preview/count.js";
+                                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                                  }());
+                                  </script>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div id="preamble">
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_installation">Installation</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah blah</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <i class="icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                <div class="paragraph">
+                <p>Ssshhh</p>
+                </div>
+                <div class="paragraph">
+                <p><a href="http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/">http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/</a></p>
+                </div>
+                </td>
+                </tr>
+                </table>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_performance_sucks">Performance sucks</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>I know</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="./open-with-livereload.png" alt="open with livereload">
+                </div>
+                </div>
+                <div class="paragraph">
+                <p>Have fun!</p>
+                </div>
+                <div class="paragraph">
+                <p>Fred Bricon<br>
+                <a href="https://twitter.com/fbricon">https://twitter.com/fbricon</a></p>
+                </div>
+                </div>
+                </div>
+              </div>
+              <div class="navigation">
+                <hr>
+                <div class="row-fluid">
+                  <div class="span4 previous">
+                    <a class="btn btn-primary btn-small" href="../../07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">&laquo; JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
+                  </div>
+                  <div class="span4 center">
+                    <a class="btn btn-primary btn-small" href="../../..">See all articles</a>
+                  </div>
+                  <div class="span4 next">
+                  </div>
+                </div>
+              </div>
+              <div class="comments">
+                
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript">
+                            var disqus_shortname = 'jbosstools-preview';
+                            var disqus_url = "http://xcoulon.github.com/jbosstools-website/blog/2013/11/21/wro.html";
+                            var disqus_developer = null;
+                            var disqus_identifier = null;
+                            (function() {
+                              var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                              dsq.src = "http://jbosstools-preview.disqus.com/embed.js";
+                              (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+                            })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=jbosstools-preview">comments powered by Disqus.</a></noscript>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container">
+      <div class="row-fluid">
+        <div class="span2 offset1">
+          <h4>Navigate</h4>
+          <ul>
+            <li>
+              <a href=".." title="Overview">Overview</a>
+            </li>
+            <li>
+              <a href="../download" title="Download">Download</a>
+            </li>
+            <li>
+              <a href="../usage" title="Usage">Usage</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Follow Us</h4>
+          <ul>
+            <li>
+              <a href="../blog" title="Blog">Blog</a>
+            </li>
+            <li>
+              <a href="http://twitter.com/jbosstools" title="Twitter">Twitter</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/109915195368578219327" title="Google+">Google+</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span2">
+          <h4>Contribute</h4>
+          <ul>
+            <li>
+              <a href="https://issues.jboss.org/browse/JBIDE" title="Submit a bug">Submit a bug</a>
+            </li>
+            <li>
+              <a href="https://github.com/jbosstools" title="Write code">Write Code</a>
+            </li>
+            <li>
+              <a href="#" title="Ask questions on the forum">Ask questions on the forum</a>
+            </li>
+            <li>
+              <a href="#" title="Talk on IRC">Talk with us on IRC</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span3 offset1">
+          <h4>Licenses</h4>
+          <p>All plugins are available under the Eclipse Public License (EPL).</p>
+          <p>They may also contain some libraries licensed under certain open source licenses such as EPL, LGPL, and/or certain other open source licenses.</p>
+          <p></p>
+          <div class="jbossbadge">
+            <a href="http://www.jboss.org/">
+              <img src="http://static.jboss.org/theme/images/common/jbossbadge.png">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="container" id="companyfooter">
+      <div class="redhatlogo">
+        <div id="logospacer"></div>
+        <a href="http://www.redhat.com/"><img src="http://static.jboss.org/theme/images/common/redhat_logo.png"></a>
+      </div>
+    </div>
+    <span class="backToTop">
+      <a href="#top">back to top</a>
+    </span>
+    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.3/bootstrap-community.js"></script>
+  </body>
+</html>

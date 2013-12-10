@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
     <meta content="" name="author">
-    <link href="http://static.jboss.org/theme/css/bootstrap-community/2.3.1.1/bootstrap-community.css" media="screen" rel="stylesheet">
+    <link href="http://static.jboss.org/theme/css/bootstrap-community/2.3.1.3/bootstrap-community.css" media="screen" rel="stylesheet">
     <!-- IE 6-8 support of HTML 5 elements -->
     <!--[if lt IE 9]>
       <script src="http://static.jboss.org/theme/js/libs/html5/pre3.6/html5.min.js"></script>
@@ -39,7 +39,7 @@
     <script src="http://static.jboss.org/theme/js/libs/jquery/jquery-1.9.1.js"></script>
   </head>
   <body>
-    <!-- begin accesibility skip to top -->
+    <!-- begin accessibility skip to top -->
     <ul class="visuallyhidden" id="top">
       <li>
         <a accesskey="n" href="#nav" title="Skip to navigation">Skip to navigation</a>
@@ -51,6 +51,9 @@
     <div class="container" id="content">
       <div class="dropup">
         <a class="tabnav-closed" href="https://www.jboss.org" id="tab">Red Hat</a>
+        <script>
+          window.addEventListener('load', function() { renderTabzilla("JBoss Tools","tools") }, false);
+        </script>
       </div>
       <div class="banner">
         <a href="#"></a>
@@ -65,7 +68,7 @@
             </a>
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li id="home"><a href="..">Home</a></li>
+                <li id="home"><a href="http://xcoulon.github.com/jbosstools-website/">Home</a></li>
                 <li id="downloads"><a href="http://xcoulon.github.com/jbosstools-website/downloads/">Downloads</a></li>
                 <li class="dropdown" id="docs"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Docs <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -119,6 +122,81 @@
                 <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
                 <div class="title">
                   <h3>
+                    <a href="../../2013/11/21/wro.html">Web Resource Optimization with m2e-wro4j</a>
+                  </h3>
+                  <div class="author">
+                    <!-- there is only one author per post but the author splitter adds an array here -->
+                    posted by
+                    <strong>Fred Bricon</strong>
+                    on
+                    <strong>Nov 21, 2013.</strong>
+                    <a class="label label-info" href="../jbosstools">jbosstools</a>
+                    <a class="label label-info" href="../jbds">jbds</a>
+                    <a class="label label-info" href=".">mobile</a>
+                  </div>
+                </div>
+              </div>
+              <div class="body">
+                <div id="preamble">
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah</p>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_installation">Installation</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>Blah blah</p>
+                </div>
+                <div class="admonitionblock note">
+                <table>
+                <tr>
+                <td class="icon">
+                <i class="icon-note" title="Note"></i>
+                </td>
+                <td class="content">
+                <div class="paragraph">
+                <p>Ssshhh</p>
+                </div>
+                <div class="paragraph">
+                <p><a href="http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/">http://download.jboss.org/jbosstools/updates/integration/kepler/integration-stack/aggregate/4.1.0/</a></p>
+                </div>
+                </td>
+                </tr>
+                </table>
+                </div>
+                </div>
+                </div>
+                <div class="sect1">
+                <h2 id="_performance_sucks">Performance sucks</h2>
+                <div class="sectionbody">
+                <div class="paragraph">
+                <p>I know</p>
+                </div>
+                <div class="imageblock">
+                <div class="content">
+                <img src="./open-with-livereload.png" alt="open with livereload">
+                </div>
+                </div>
+                <div class="paragraph">
+                <p>Have fun!</p>
+                </div>
+                <div class="paragraph">
+                <p>Fred Bricon<br>
+                <a href="https://twitter.com/fbricon">https://twitter.com/fbricon</a></p>
+                </div>
+                </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+            <div class="post">
+              <div class="title-wrapper">
+                <img class="img-polaroid" src="https://community.jboss.org/people/fbricon/avatar/64.png">
+                <div class="title">
+                  <h3>
                     <a href="../../2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
                   </h3>
                   <div class="author">
@@ -166,7 +244,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -225,7 +303,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/open-with-livereload.png" alt="open with livereload">
+                <img src="./open-with-livereload.png" alt="open with livereload">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -241,7 +319,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/LiveReload_open_in_web_browser_via_qrcode-dialog.png" alt="LiveReload open in web browser via qrcode dialog">
+                <img src="./LiveReload_open_in_web_browser_via_qrcode-dialog.png" alt="LiveReload open in web browser via qrcode dialog">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -251,7 +329,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -278,12 +356,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/lf.png" alt="lf">
+                <img src="./lf.png" alt="lf">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/set.png" alt="set">
+                <img src="./set.png" alt="set">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -318,14 +396,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/browsersim-firebug.png" alt="browsersim firebug">
+                <img src="./browsersim-firebug.png" alt="browsersim firebug">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -351,12 +429,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/missing-xulrunner.png" alt="missing xulrunner">
+                <img src="./missing-xulrunner.png" alt="missing xulrunner">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/vpe-win64.png" alt="vpe win64">
+                <img src="./vpe-win64.png" alt="vpe win64">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -375,14 +453,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/runConfigs.png" alt="runConfigs">
+                <img src="./runConfigs.png" alt="runConfigs">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -402,14 +480,14 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/CordovaSim-demo.png" alt="CordovaSim demo">
+                <img src="./CordovaSim-demo.png" alt="CordovaSim demo">
                 </div>
                 </div>
                 <div class="admonitionblock note">
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -448,7 +526,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/new-forge-based-wizards.png" alt="new forge based wizards">
+                <img src="./new-forge-based-wizards.png" alt="new forge based wizards">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -486,12 +564,12 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/arquillian-junit-1.png" alt="arquillian junit 1">
+                <img src="./arquillian-junit-1.png" alt="arquillian junit 1">
                 </div>
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/arquillian-test-3.png" alt="arquillian test 3">
+                <img src="./arquillian-test-3.png" alt="arquillian test 3">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -501,7 +579,7 @@
                 <table>
                 <tr>
                 <td class="icon">
-                <div class="title">Note</div>
+                <i class="icon-note" title="Note"></i>
                 </td>
                 <td class="content">
                 <div class="paragraph">
@@ -526,7 +604,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/publishing-to-openshift.png" alt="publishing to openshift">
+                <img src="./publishing-to-openshift.png" alt="publishing to openshift">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -543,7 +621,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/restart-application.png" alt="restart application">
+                <img src="./restart-application.png" alt="restart application">
                 </div>
                 </div>
                 </div>
@@ -554,7 +632,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/advanced-source-code.png" alt="advanced source code">
+                <img src="./advanced-source-code.png" alt="advanced source code">
                 </div>
                 </div>
                 </div>
@@ -565,7 +643,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/configure-markers-wizard.png" alt="configure markers wizard">
+                <img src="./configure-markers-wizard.png" alt="configure markers wizard">
                 </div>
                 </div>
                 </div>
@@ -585,7 +663,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/jboss_central.png" alt="jboss central">
+                <img src="./jboss_central.png" alt="jboss central">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -613,7 +691,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/new-server-adapters.png" alt="new server adapters">
+                <img src="./new-server-adapters.png" alt="new server adapters">
                 </div>
                 </div>
                 </div>
@@ -669,7 +747,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/automatic-source-lookup.png" alt="automatic source lookup">
+                <img src="./automatic-source-lookup.png" alt="automatic source lookup">
                 </div>
                 </div>
                 <div class="paragraph">
@@ -683,7 +761,7 @@
                 </div>
                 <div class="imageblock">
                 <div class="content">
-                <img src="http://xcoulon.github.com/jbosstools-website/blog/images/edit-maven-repositories.png" alt="edit maven repositories">
+                <img src="./edit-maven-repositories.png" alt="edit maven repositories">
                 </div>
                 </div>
                 </div>
@@ -728,16 +806,13 @@
                 <h4>Recent Posts</h4>
                 <ul>
                   <li>
+                    <a href="../../2013/11/21/wro.html">Web Resource Optimization with m2e-wro4j</a>
+                  </li>
+                  <li>
                     <a href="../../2013/07/23/jbosstools_41_and_Red_Hat_Developer_Studio_7_go_GA.html">JBoss Tools 4.1 and Red Hat JBoss Developer Studio 7 go GA</a>
                   </li>
                   <li>
-                    <a href="../../2012/09/17/return-of-jboss-tools.html">The Return of JBoss Tools</a>
-                  </li>
-                  <li>
                     <a href="../../2012/08/24/show-domain-info-openshift-java-client-in-a-nutshell.html">show-domain-info: openshift-java-client in a nutshell</a>
-                  </li>
-                  <li>
-                    <a href="../../2012/08/22/summer-time-with-new-release-soa-tools-and-a-bit-of-juno-and-fedora-news.html">Summer time with new release, SOA tools and a bit of Juno and Fedora news</a>
                   </li>
                 </ul>
               </div>
@@ -770,7 +845,7 @@
           <h4>Navigate</h4>
           <ul>
             <li>
-              <a href="" title="Overview">Overview</a>
+              <a href=".." title="Overview">Overview</a>
             </li>
             <li>
               <a href="../download" title="Download">Download</a>
@@ -833,6 +908,6 @@
     <span class="backToTop">
       <a href="#top">back to top</a>
     </span>
-    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.1/bootstrap-community.js"></script>
+    <script src="http://static.jboss.org/theme/js/libs/bootstrap-community/2.3.1.3/bootstrap-community.js"></script>
   </body>
 </html>
