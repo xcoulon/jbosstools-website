@@ -1,4 +1,4 @@
-= Tip#1 - Effective editing of enhanced for loops in Eclipse
+= Tools Tip#1 - Effective editing of enhanced for loops in Eclipse
 :page-layout: blog
 :page-author: maxandersen
 :page-tags: [tip, jbosscentral]
@@ -36,7 +36,7 @@ It is available when you have type the name of the collection and use the kbd:[C
 
 To illustrate it, here is a small video of it in Eclipse.
 
-video::114184876[vimeo, options="autoplay,loop"]
+video::114184876[vimeo, width=480, height=270, options="autoplay,loop"]
 
 Hope you enjoyed this little tip!
 
