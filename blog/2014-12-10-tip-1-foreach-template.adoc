@@ -19,14 +19,14 @@ code like this:
 [source,java]
 ----
 public void process(List<Product> products) {
- List<Customer> customers = getCustomers();
+  List<Customer> customers = getCustomers();
   for(Customer c : customers) {
     // cursor here
   }
 }
 ----
 
-But  the `foreach` template will always choose the *nearest* collection. Making it
+But the `foreach` template will always choose the *nearest* collection, making it
 impossible to use with for example the `products` parameter in the above example.
 
 The solution is to use the 'enhanced for loop' Quick Fix.
@@ -40,8 +40,8 @@ video::114184876[vimeo, width=480, height=270, options="autoplay,loop"]
 
 Hope you enjoyed this little tip!
 
-Thanks for https://developer.jboss.org/people/xcoulon[Xavier Coulon] asking the question and giving the idea for this Tip blog, and thanks to Markus Keller (JDT UI lead) to remind me about the Quick Fix solution.
+Thanks to https://twitter.com/xcoulon[Xavier Coulon] for asking the question and giving the idea for this Tip blog, and thanks to Markus Keller (JDT UI lead) for reminding me about the Quick Fix solution.
 
-Have fun,
+Have fun, +
 Max Rydahl Andersen +
 http://twitter.com/maxandersen[@maxandersen]
