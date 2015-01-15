@@ -1427,3 +1427,29 @@ $scrollmargin: 40px;
   }
 }
 
+// ****************************************
+// Issues
+// ****************************************
+#versions {
+  table {
+    thead {
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    tr {
+      border-spacing: 2px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #CCC;
+      border-collapse: collapse;
+      color: #333;
+      line-height: 20px;
+    }
+    td {
+      padding: 0.5em 1em;
+      vertical-align: top;
+    }
+  }
+
+}
+
